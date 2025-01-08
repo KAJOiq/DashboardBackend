@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Ticket.Dtos.Account;
 using Ticket.Interfaces;
 using Ticket.Models;
@@ -8,10 +9,11 @@ namespace Ticket.Controllers;
 
 [Route("api/account")]
 [ApiController]
-public class AccountController(UserManager<User> userManager, ITokenService tokenService) : ControllerBase
+public class AccountController(UserManager<User> userManager, ITokenService tokenService,SignInManager<User> signInManager) : ControllerBase
 {
     private readonly UserManager<User> _userManager = userManager;
     private readonly ITokenService _tokenService = tokenService;
+    private readonly SignInManager<User> _signInManager = signInManager;
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] RegisterDto register)
     {
@@ -23,10 +25,12 @@ public class AccountController(UserManager<User> userManager, ITokenService toke
             }
             var user = new User
             {
+                SecondPhone =  "",
+                Position = "",
                 UserName = register.UserName,
-                Email = register.Email
+                Email = register.Email,
             };
-            var createUser = await _userManager.CreateAsync(user, register.Password);
+            var createUser = await _userManager.CreateAsync(user, register.Password ??"");
             if (createUser.Succeeded)
             {
                 var roleResult = await _userManager.AddToRoleAsync(user, "User");
@@ -49,10 +53,19 @@ public class AccountController(UserManager<User> userManager, ITokenService toke
             return StatusCode(500, e);
         }
     }
-
-    [HttpPost]
-    public async Task<ActionResult> CreateSome()
-    {
-        return Ok();
+    [HttpPost("login")]
+    public async Task<IActionResult> Login(LoginDto loginDto){
+        if(!ModelState.IsValid){
+            return BadRequest(ModelState);
+        }
+        var user = await _userManager.Users.FirstOrDefaultAsync(x => x.Email == loginDto.Email.ToLower());
+        if(user == null) return Unauthorized("Invalid user name");
+        var result = await _signInManager.CheckPasswordSignInAsync(user ,loginDto.Password,false );
+        if(!result.Succeeded) return Unauthorized("UserName not found or password incorrect");
+        return Ok(new NewUserDto{
+            Username = user.UserName,
+            Email = user.Email,
+            Token = _tokenService.CreateToken(user)
+        });
     }
 }

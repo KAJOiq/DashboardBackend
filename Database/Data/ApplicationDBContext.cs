@@ -6,20 +6,14 @@ using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace Ticket.Data
 {
-    public class ApplicationDBContext : IdentityDbContext<User>
+    public class ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : IdentityDbContext<User>(options)
     {
-        public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options)
-            : base(options)
-        {
-        }
-
-        public DbSet<User> Users { get; set; }
+        public DbSet<User>? User { get; set; } 
+        public DbSet<Department>? Department {get; set;}
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.ConfigureWarnings(warnings => warnings.Ignore(CoreEventId.ManyServiceProvidersCreatedWarning));
-            
-            // Suppress the specific warning
             optionsBuilder.ConfigureWarnings(warnings => warnings.Ignore(RelationalEventId.PendingModelChangesWarning));
         }
 
@@ -27,19 +21,19 @@ namespace Ticket.Data
         {
             base.OnModelCreating(builder);
             
-            List<IdentityRole> roles = new List<IdentityRole>
-            {
-                new IdentityRole
+            List<IdentityRole> roles =
+            [
+                new()
                 {
                     Name = "Admin",
                     NormalizedName = "ADMIN"
                 },
-                new IdentityRole
+                new() 
                 {
                     Name = "User",
                     NormalizedName = "USER"
                 },
-            };
+            ];
             builder.Entity<IdentityRole>().HasData(roles);
         }
     }

@@ -8,6 +8,7 @@ namespace Ticket.Models
 {
     public class User : IdentityUser
     {
-        
+        public required string SecondPhone {set; get;} = string.Empty;
+        public required string Position {set; get;} = string.Empty;
     }
 }

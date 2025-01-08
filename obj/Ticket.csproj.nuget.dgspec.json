@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Nas\\Ticket\\Ticket.csproj": {}
+    "C:\\Nas\\Ticket\\Ticket.csproj": {}
   },
   "projects": {
-    "c:\\Nas\\Ticket\\Ticket.csproj": {
+    "C:\\Nas\\Ticket\\Ticket.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Nas\\Ticket\\Ticket.csproj",
+        "projectUniqueName": "C:\\Nas\\Ticket\\Ticket.csproj",
         "projectName": "Ticket",
-        "projectPath": "c:\\Nas\\Ticket\\Ticket.csproj",
+        "projectPath": "C:\\Nas\\Ticket\\Ticket.csproj",
         "packagesPath": "C:\\Users\\nass1\\.nuget\\packages\\",
-        "outputPath": "c:\\Nas\\Ticket\\obj\\",
+        "outputPath": "C:\\Nas\\Ticket\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nass1\\AppData\\Roaming\\NuGet\\NuGet.Config",

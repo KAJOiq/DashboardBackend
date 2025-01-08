@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gxrhZHvYVt0=",
+  "dgSpecHash": "48MOeTQuf8A=",
   "success": true,
-  "projectFilePath": "c:\\Nas\\Ticket\\Ticket.csproj",
+  "projectFilePath": "C:\\Nas\\Ticket\\Ticket.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nass1\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\nass1\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
