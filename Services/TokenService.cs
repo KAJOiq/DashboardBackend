@@ -5,7 +5,9 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Ticket.Dtos.Account;
 using Ticket.Interfaces;
 using Ticket.Models;
 
@@ -14,8 +16,10 @@ public class TokenService : ITokenService
 {
     private readonly IConfiguration _configuration;
     private readonly SymmetricSecurityKey _key;
-    public TokenService(IConfiguration configuration)
+    private readonly IOptions<JwtSettings> _jwtSettings;
+    public TokenService(IConfiguration configuration,IOptions<JwtSettings> jwtSettings)
     {
+        _jwtSettings = jwtSettings.Value;
         _configuration = configuration;
         _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:SigningKey"]));
     }
@@ -41,7 +45,7 @@ public class TokenService : ITokenService
             Issuer = _configuration["JWT:Issuer"],
             Audience = _configuration["JWT:Audience"]
         };
-        
+
         var tokenHandler = new JwtSecurityTokenHandler();
         var token = tokenHandler.CreateToken(tokenDescriptor);
         return tokenHandler.WriteToken(token);

@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Ticket.Interfaces;
 using Ticket.Services;
+using Ticket.Dtos.Account;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +15,7 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("WebApiDatabase"))
            .ConfigureWarnings(warnings => warnings.Ignore(RelationalEventId.PendingModelChangesWarning)));
            
-//builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JWT"));
+builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JWT"));
 
 builder.Services.AddScoped<ITokenService,TokenService>();
 builder.Services.AddControllers();
