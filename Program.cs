@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore.Diagnostics;
 using Ticket.Interfaces;
 using Ticket.Services;
 using Ticket.Dtos.Account;
+using Ticket.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,8 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JWT"));
 
 builder.Services.AddScoped<ITokenService,TokenService>();
+builder.Services.AddScoped<IDepartmentRepository,DepartmentRepository>();
+
 builder.Services.AddControllers();
 
 // Add services to the container.

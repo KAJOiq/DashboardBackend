@@ -1,5 +1,6 @@
 namespace Ticket.Dtos.Department;
-public record DepartmentQueryDto(
-    int Id,
-    string DepartmentName
-);
+public class DepartmentQueryDto
+{
+    public int CurrentPage { set; get; } = 1;
+    public int PageSize { set; get; } = 10;
+};

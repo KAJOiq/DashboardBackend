@@ -8,8 +8,8 @@ namespace Ticket.Data
 {
     public class ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : IdentityDbContext<User>(options)
     {
-        public DbSet<User>? User { get; set; } 
-        public DbSet<Department>? Department {get; set;}
+        public DbSet<User> User { get; set; } = null!;
+        public DbSet<Department> Department {get; set;} = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
