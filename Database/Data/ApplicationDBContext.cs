@@ -10,6 +10,7 @@ namespace Ticket.Data
     {
         public DbSet<User> User { get; set; } = null!;
         public DbSet<Department> Department {get; set;} = null!;
+        public DbSet<UserDepartment> UserDepartment {get; set;} = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -20,7 +21,17 @@ namespace Ticket.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            
+
+            builder.Entity<User>()
+                .HasMany(s => s.UserDepartments)
+                .WithOne(c => c.User)
+                .HasForeignKey(c => c.UserId);
+
+            builder.Entity<Department>()
+                .HasMany(s => s.UserDepartments)
+                .WithOne(c => c.Department)
+                .HasForeignKey(c => c.UserId);
+
             List<IdentityRole> roles =
             [
                 new()
@@ -35,6 +46,8 @@ namespace Ticket.Data
                 },
             ];
             builder.Entity<IdentityRole>().HasData(roles);
+
+           
         }
     }
 }

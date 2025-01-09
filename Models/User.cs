@@ -10,5 +10,6 @@ namespace Ticket.Models
     {
         public required string SecondPhone {set; get;} = string.Empty;
         public required string Position {set; get;} = string.Empty;
+        public List<UserDepartment> UserDepartments {set; get;} = [];
     }
 }
