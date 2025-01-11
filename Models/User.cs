@@ -1,15 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 
-namespace Ticket.Models
+namespace Ticket.Models;
+public class User : IdentityUser
 {
-    public class User : IdentityUser
-    {
-        public required string SecondPhone {set; get;} = string.Empty;
-        public required string Position {set; get;} = string.Empty;
-        public List<UserDepartment> UserDepartments {set; get;} = [];
-    }
+    public string? SecondPhone { set; get; }
+    public string Position { set; get; } = string.Empty;
+    public string Sex { set; get; } = string.Empty;
+    public DateTime DOB { get; set; }
+    public string Photo_url { set; get; } = string.Empty;
+    public string Address { set; get; } = string.Empty;
+    public DateTime EmploymentDate { get; set; } = DateTime.UtcNow;
+    public List<UserDepartment>? UserDepartments { set; get; }
 }

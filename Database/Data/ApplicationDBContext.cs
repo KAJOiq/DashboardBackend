@@ -9,8 +9,9 @@ namespace Ticket.Data
     public class ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : IdentityDbContext<User>(options)
     {
         public DbSet<User> User { get; set; } = null!;
-        public DbSet<Department> Department {get; set;} = null!;
-        public DbSet<UserDepartment> UserDepartment {get; set;} = null!;
+        public DbSet<Department> Department { get; set; } = null!;
+        public DbSet<UserDepartment> UserDepartment { get; set; } = null!;
+        public DbSet<Models.Ticket> Ticket { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -32,6 +33,10 @@ namespace Ticket.Data
                 .WithOne(c => c.Department)
                 .HasForeignKey(c => c.UserId);
 
+            builder.Entity<Models.Ticket>()
+                .Property(o => o.Status)
+                .HasConversion<string>();
+
             List<IdentityRole> roles =
             [
                 new()
@@ -39,7 +44,7 @@ namespace Ticket.Data
                     Name = "Admin",
                     NormalizedName = "ADMIN"
                 },
-                new() 
+                new()
                 {
                     Name = "User",
                     NormalizedName = "USER"
@@ -47,7 +52,7 @@ namespace Ticket.Data
             ];
             builder.Entity<IdentityRole>().HasData(roles);
 
-           
+
         }
     }
 }

@@ -21,6 +21,8 @@ builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JWT"))
 builder.Services.AddScoped<ITokenService,TokenService>();
 builder.Services.AddScoped<IDepartmentRepository,DepartmentRepository>();
 builder.Services.AddScoped<IUserDepartmentRepository,UserDepartmentRepository>();
+builder.Services.AddScoped<ITicketRepository , TicketRepository>();
+builder.Services.AddScoped<ITicketStatusManager , TicketStatusManager>();
 
 builder.Services.AddControllers();
 
