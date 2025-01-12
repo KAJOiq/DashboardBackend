@@ -23,6 +23,7 @@ builder.Services.AddScoped<IDepartmentRepository,DepartmentRepository>();
 builder.Services.AddScoped<IUserDepartmentRepository,UserDepartmentRepository>();
 builder.Services.AddScoped<ITicketRepository , TicketRepository>();
 builder.Services.AddScoped<ITicketStatusManager , TicketStatusManager>();
+builder.Services.AddScoped<ITicketPriorityManager , TicketPriorityManager>();
 
 builder.Services.AddControllers();
 

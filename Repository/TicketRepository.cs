@@ -1,4 +1,3 @@
-using Microsoft.EntityFrameworkCore;
 using Ticket.Contracts;
 using Ticket.Data;
 using Ticket.Dtos.Tickets;
@@ -6,10 +5,11 @@ using Ticket.Enums;
 using Ticket.Interfaces;
 
 namespace Ticket.Repository;
-public class TicketRepository(ApplicationDBContext context, ITicketStatusManager ticketStatusManager) : ITicketRepository
+public class TicketRepository(ApplicationDBContext context, ITicketStatusManager ticketStatusManager,ITicketPriorityManager ticketPriorityManager) : ITicketRepository
 {
     private readonly ITicketStatusManager _ticketStatusManager = ticketStatusManager;
     private readonly ApplicationDBContext _context = context;
+    private readonly ITicketPriorityManager _ticketPriorityManager = ticketPriorityManager;
     public async Task<List<Models.Ticket>> GetByDepartmentId(int id, TicketQueryDto ticketQueryDto)
     {
         var department = _context.Ticket
@@ -27,6 +27,26 @@ public class TicketRepository(ApplicationDBContext context, ITicketStatusManager
         );
 
         return paginatedResponse.Items.ToList();
+    }
+
+    public async Task<Models.Ticket> UpdatePriority(int id, UpdatePriorityDto dto)
+    {
+        var ticket = await _context.Ticket.FindAsync(id);
+        if (ticket == null)
+        {
+            throw new KeyNotFoundException($"Ticket ID {id} not found.");
+        }
+
+        var newPriority = (TicketPriority)Enum.Parse(typeof(TicketStatus), dto.NewPriority, true);
+        if (!_ticketPriorityManager.CanTransition(ticket.Priority, newPriority))
+        {
+            throw new Exception("Invalid Priority transition");
+        }
+
+        ticket.Priority = newPriority;
+        await _context.SaveChangesAsync();
+
+        return ticket;
     }
 
     public async Task<Models.Ticket> UpdateStatus(int id, UpdateStatusDto dto)
