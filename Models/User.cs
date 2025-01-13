@@ -11,4 +11,5 @@ public class User : IdentityUser
     public string Address { set; get; } = string.Empty;
     public DateTime EmploymentDate { get; set; } = DateTime.UtcNow;
     public List<UserDepartment>? UserDepartments { set; get; }
+    public List<Ticket>? UserTickets { set; get; }
 }

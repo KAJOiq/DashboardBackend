@@ -7,6 +7,7 @@ public class Ticket
     public Guid CustomerId { set; get; }
     public User? User { set; get; } = null!;
     public int DepartmentId { set; get; }
+    public Department department {set; get;} = null!;
     public string Title { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;
     public string Note { get; set; } = string.Empty;
