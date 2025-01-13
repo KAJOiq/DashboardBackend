@@ -10,6 +10,14 @@ public class TicketRepository(ApplicationDBContext context, ITicketStatusManager
     private readonly ITicketStatusManager _ticketStatusManager = ticketStatusManager;
     private readonly ApplicationDBContext _context = context;
     private readonly ITicketPriorityManager _ticketPriorityManager = ticketPriorityManager;
+
+    public async Task<Models.Ticket> CreateAsync(Models.Ticket ticket)
+    {
+        await _context.Ticket.AddAsync(ticket);
+        await _context.SaveChangesAsync();
+        return ticket;
+    }
+
     public async Task<List<Models.Ticket>> GetByDepartmentId(int id, TicketQueryDto ticketQueryDto)
     {
         var department = _context.Ticket

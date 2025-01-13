@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Ticket.Dtos.Tickets;
 using Ticket.Interfaces;
+using Ticket.Mappers;
 
 namespace Ticket.Controllers;
 [Route("api/ticket")]
@@ -15,6 +16,13 @@ public class TicketController(ITicketRepository ticketRepository) : ControllerBa
     {
         var tickets = await _ticketRepository.GetByDepartmentId(id, query);
         return Ok(tickets);
+    }
+     [HttpPost]
+    public async Task<IActionResult> Create([FromBody] TicketRequestDto ticketRequestDto)
+    {
+        var departmentModel = ticketRequestDto.TicketFormCreateDTO();
+        await _ticketRepository.CreateAsync(departmentModel);
+        return Ok("created success");
     }
 
     [HttpPatch]
