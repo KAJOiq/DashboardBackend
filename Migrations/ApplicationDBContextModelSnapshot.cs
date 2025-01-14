@@ -50,13 +50,13 @@ namespace Ticket.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "b38dc944-ce52-48b0-82e3-9a19a2a98fdc",
+                            Id = "8daaa517-57b5-4931-b173-c32a2efc1478",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "2b76d343-e6ed-4ff2-80f8-39532504e586",
+                            Id = "73261b3e-7854-4db3-857b-45864c456dec",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -168,6 +168,90 @@ namespace Ticket.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Ticket.Models.Department", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("DepartmentName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Department");
+                });
+
+            modelBuilder.Entity("Ticket.Models.Ticket", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AssignId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("AssignId1")
+                        .HasColumnType("text");
+
+                    b.Property<string>("AssignorId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("ClosedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("CustomerId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("DepartmentId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Note")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Photo_url")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Priority")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AssignId");
+
+                    b.HasIndex("AssignId1");
+
+                    b.HasIndex("AssignorId");
+
+                    b.HasIndex("DepartmentId");
+
+                    b.ToTable("Ticket");
+                });
+
             modelBuilder.Entity("Ticket.Models.User", b =>
                 {
                     b.Property<string>("Id")
@@ -176,9 +260,16 @@ namespace Ticket.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("integer");
 
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("text");
+
+                    b.Property<DateTime>("DOB")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256)
@@ -186,6 +277,9 @@ namespace Ticket.Migrations
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("boolean");
+
+                    b.Property<DateTime>("EmploymentDate")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("boolean");
@@ -210,7 +304,22 @@ namespace Ticket.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("boolean");
 
+                    b.Property<string>("Photo_url")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Position")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("SecondPhone")
+                        .HasColumnType("text");
+
                     b.Property<string>("SecurityStamp")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Sex")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<bool>("TwoFactorEnabled")
@@ -230,6 +339,21 @@ namespace Ticket.Migrations
                         .HasDatabaseName("UserNameIndex");
 
                     b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("Ticket.Models.UserDepartment", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("text");
+
+                    b.Property<int>("DepartmentId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("UserId", "DepartmentId");
+
+                    b.HasIndex("DepartmentId");
+
+                    b.ToTable("UserDepartment");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -281,6 +405,72 @@ namespace Ticket.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Ticket.Models.Ticket", b =>
+                {
+                    b.HasOne("Ticket.Models.User", "User")
+                        .WithMany("UserTickets")
+                        .HasForeignKey("AssignId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Ticket.Models.User", "Assign")
+                        .WithMany()
+                        .HasForeignKey("AssignId1");
+
+                    b.HasOne("Ticket.Models.User", "Assignor")
+                        .WithMany()
+                        .HasForeignKey("AssignorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Ticket.Models.Department", "department")
+                        .WithMany("DepartmentTickets")
+                        .HasForeignKey("DepartmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Assign");
+
+                    b.Navigation("Assignor");
+
+                    b.Navigation("User");
+
+                    b.Navigation("department");
+                });
+
+            modelBuilder.Entity("Ticket.Models.UserDepartment", b =>
+                {
+                    b.HasOne("Ticket.Models.Department", "Department")
+                        .WithMany("UserDepartments")
+                        .HasForeignKey("DepartmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Ticket.Models.User", "User")
+                        .WithMany("UserDepartments")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Department");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Ticket.Models.Department", b =>
+                {
+                    b.Navigation("DepartmentTickets");
+
+                    b.Navigation("UserDepartments");
+                });
+
+            modelBuilder.Entity("Ticket.Models.User", b =>
+                {
+                    b.Navigation("UserDepartments");
+
+                    b.Navigation("UserTickets");
                 });
 #pragma warning restore 612, 618
         }

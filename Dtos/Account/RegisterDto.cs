@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using Microsoft.Net.Http.Headers;
 
 namespace Ticket.Dtos.Account;
 public class RegisterDto
@@ -16,5 +17,12 @@ public class RegisterDto
     public string SecondPhone {get; set;} = string.Empty;
     [Required]
     public string Password {get; set;} = string.Empty;
-
+    [Required]
+    public string Sex {get; set;} = string.Empty;
+    [Required]
+    public DateTime DOB {get; set;} 
+    [Required]
+    public string Address {get; set;} = string.Empty;
+    [Required]
+    public DateTime EmploymentDate {get; set;} 
 }

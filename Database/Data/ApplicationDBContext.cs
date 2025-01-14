@@ -32,7 +32,7 @@ namespace Ticket.Data
                 .HasMany(s => s.UserTickets)
                 .WithOne(c => c.User)
                 .HasForeignKey(c => c.CustomerId);
-                
+
             builder.Entity<User>()
                 .HasMany(s => s.UserTickets)
                 .WithOne(c => c.User)
@@ -57,6 +57,19 @@ namespace Ticket.Data
                 .HasMany(s => s.DepartmentTickets)
                 .WithOne(c => c.department)
                 .HasForeignKey(c => c.DepartmentId);
+
+            builder.Entity<UserDepartment>()
+                .HasKey(ud => new { ud.UserId, ud.DepartmentId });
+
+            builder.Entity<UserDepartment>()
+                .HasOne(ud => ud.User)
+                .WithMany(u => u.UserDepartments)
+                .HasForeignKey(ud => ud.UserId);
+
+            builder.Entity<UserDepartment>()
+                .HasOne(ud => ud.Department)
+                .WithMany(d => d.UserDepartments)
+                .HasForeignKey(ud => ud.DepartmentId);
 
             builder.Entity<Models.Ticket>()
                 .Property(o => o.Status)

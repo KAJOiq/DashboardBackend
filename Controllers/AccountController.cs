@@ -5,19 +5,22 @@ using Ticket.Dtos.Account;
 using Ticket.Interfaces;
 using Ticket.Models;
 using System.Security.Claims;
+using Ticket.Mappers;
 
 namespace Ticket.Controllers;
 
 [Route("api/account")]
 [ApiController]
-public class AccountController(UserManager<User> userManager, ITokenService tokenService,SignInManager<User> signInManager , IAccountManager accountManager) : ControllerBase
+public class AccountController(UserManager<User> userManager, ITokenService tokenService,SignInManager<User> signInManager , IAccountManager accountManager , IImageService imageService) : ControllerBase
 {
     private readonly UserManager<User> _userManager = userManager;
     private readonly ITokenService _tokenService = tokenService;
     private readonly SignInManager<User> _signInManager = signInManager;
     private readonly IAccountManager _accountManager = accountManager;
+    private readonly IImageService _imageService = imageService;
+
     [HttpPost("register")]
-    public async Task<IActionResult> Register([FromBody] RegisterDto register)
+    public async Task<IActionResult> Register([FromForm] RegisterDto register , IFormFile image)
     {
         try
         {
@@ -25,13 +28,14 @@ public class AccountController(UserManager<User> userManager, ITokenService toke
             {
                 return BadRequest(ModelState);
             }
-            var user = new User
+            
+            string? imagePath = null;
+
+            if (image != null)
             {
-                SecondPhone =  "",
-                Position = "",
-                UserName = register.UserName,
-                Email = register.Email,
-            };
+                imagePath = await _imageService.UploadImageAsync(image);
+            }
+            var user = register.ToUserFormCreateDTO(imagePath!);
             var createUser = await _userManager.CreateAsync(user, register.Password ??"");
             if (createUser.Succeeded)
             {
@@ -64,11 +68,7 @@ public class AccountController(UserManager<User> userManager, ITokenService toke
         if(user == null) return Unauthorized("Invalid user name");
         var result = await _signInManager.CheckPasswordSignInAsync(user ,loginDto.Password,false );
         if(!result.Succeeded) return Unauthorized("UserName not found or password incorrect");
-        return Ok(new NewUserDto{
-            Username = user.UserName,
-            Email = user.Email,
-            Token = _tokenService.CreateToken(user)
-        });
+        return Ok(user.ToUserDto(_tokenService.CreateToken(user)));
     }
 
     [HttpPost]

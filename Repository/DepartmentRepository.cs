@@ -28,13 +28,11 @@ public class DepartmentRepository(ApplicationDBContext context) : IDepartmentRep
         return departmentModel;
     }
 
-    public async Task<List<Department>> GetAllAsync(DepartmentQueryDto departmentQueryDto)
+    public async Task<PaginatedResponse<Department>> GetAllAsync(DepartmentQueryDto departmentQueryDto)
     {
-        IQueryable<Department> query = _context.Department.Include(c => c.Id);
+        IQueryable<Department> query = _context.Department;
 
-        var paginatedResponse = await PaginatedResponse<Department>.CreateAsync(query, departmentQueryDto.CurrentPage, departmentQueryDto.PageSize);
-
-        return paginatedResponse.Items.ToList();
+        return await PaginatedResponse<Department>.CreateAsync(query, departmentQueryDto.CurrentPage, departmentQueryDto.PageSize);
     }
 
     public async Task<Department> GetByIdAsync(int id)
