@@ -26,12 +26,12 @@ public class MainProblemController(IMainProblemRepository mainProblemRepository)
     [HttpGet("department/{departmentId:int}")]
     public async Task<IActionResult> GetByDepartmentId([FromRoute] int departmentId)
     {
-        var employees = await _mainProblemRepository.GetByDepartmentId(departmentId);
-        if (employees == null)
+        var problem = await _mainProblemRepository.GetByDepartmentId(departmentId);
+        if (problem == null)
         {
             return NotFound();
         }
-        var departmentDto = employees.Select(s => s.ToMainProblemDto());
+        var departmentDto = problem.Select(s => s.ToMainProblemDto());
         return Ok(departmentDto);
     }
 

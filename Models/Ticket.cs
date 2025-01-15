@@ -20,4 +20,5 @@ public class Ticket
     public User? Assign { set; get; } = null!;
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime? ClosedAt { get; set; }
+    public List<Replies> Replies {set; get;} = [];
 }

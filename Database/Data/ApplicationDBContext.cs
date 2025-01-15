@@ -14,6 +14,7 @@ namespace Ticket.Data
         public DbSet<Models.Ticket> Ticket { get; set; } = null!;
         public DbSet<MainProblem> MainProblems { get; set; } = null!;
         public DbSet<SubProblem> SubProblems { get; set; } = null!;
+        public DbSet<Replies> Replies { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -86,6 +87,10 @@ namespace Ticket.Data
                 .HasMany(s => s.SubProblems)
                 .WithOne(x => x.MainProblem)
                 .HasForeignKey(ud => ud.MainProblemId);
+            builder.Entity<Models.Ticket>()
+                .HasMany(s => s.Replies)
+                .WithOne(x => x.Ticket)
+                .HasForeignKey(ud => ud.TicketId);
 
             List<IdentityRole> roles =
             [
