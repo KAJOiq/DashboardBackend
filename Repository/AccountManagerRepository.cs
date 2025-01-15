@@ -1,11 +1,14 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Ticket.Dtos.Account;
 using Ticket.Interfaces;
+using Ticket.Models;
 
 namespace Ticket.Repository;
-public class AccountManagerRepository(RoleManager<IdentityRole> roleManager) : IAccountManager
+public class AccountManagerRepository(RoleManager<IdentityRole> roleManager, UserManager<User> userManager) : IAccountManager
 {
+    private readonly UserManager<User> _userManager = userManager;
     private readonly RoleManager<IdentityRole> _roleManager = roleManager;
     public async Task<IdentityResult> AddClaimToRoleAsync(CreateRoleDto dto, Claim claim)
     {
@@ -43,6 +46,20 @@ public class AccountManagerRepository(RoleManager<IdentityRole> roleManager) : I
     public async Task<IdentityRole?> FindRoleByNameAsync(GetRoleDto dto)
     {
         return await _roleManager.FindByNameAsync(dto.RoleName);
+    }
+
+    public async Task<List<User>> GetUsers(string position)
+    {
+        if (string.IsNullOrEmpty(position))
+        {
+            throw new Exception("Position parameter is required.");
+        }
+
+        var users = await _userManager.Users
+            .Where(user => user.Position.ToLower() == position.ToLower())
+            .ToListAsync();
+
+        return users;
     }
 
     public async Task<bool> RoleExistsAsync(string roleName)

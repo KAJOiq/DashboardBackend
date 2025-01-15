@@ -11,7 +11,7 @@ namespace Ticket.Controllers;
 
 [Route("api/account")]
 [ApiController]
-public class AccountController(UserManager<User> userManager, ITokenService tokenService,SignInManager<User> signInManager , IAccountManager accountManager , IImageService imageService) : ControllerBase
+public class AccountController(UserManager<User> userManager, ITokenService tokenService, SignInManager<User> signInManager, IAccountManager accountManager, IImageService imageService) : ControllerBase
 {
     private readonly UserManager<User> _userManager = userManager;
     private readonly ITokenService _tokenService = tokenService;
@@ -20,7 +20,7 @@ public class AccountController(UserManager<User> userManager, ITokenService toke
     private readonly IImageService _imageService = imageService;
 
     [HttpPost("register")]
-    public async Task<IActionResult> Register([FromForm] RegisterDto register , IFormFile image)
+    public async Task<IActionResult> Register([FromForm] RegisterDto register, IFormFile image)
     {
         try
         {
@@ -28,7 +28,7 @@ public class AccountController(UserManager<User> userManager, ITokenService toke
             {
                 return BadRequest(ModelState);
             }
-            
+
             string? imagePath = null;
 
             if (image != null)
@@ -36,7 +36,7 @@ public class AccountController(UserManager<User> userManager, ITokenService toke
                 imagePath = await _imageService.UploadImageAsync(image);
             }
             var user = register.ToUserFormCreateDTO(imagePath!);
-            var createUser = await _userManager.CreateAsync(user, register.Password ??"");
+            var createUser = await _userManager.CreateAsync(user, register.Password ?? "");
             if (createUser.Succeeded)
             {
                 var roleResult = await _userManager.AddToRoleAsync(user, "User");
@@ -60,15 +60,23 @@ public class AccountController(UserManager<User> userManager, ITokenService toke
         }
     }
     [HttpPost("login")]
-    public async Task<IActionResult> Login(LoginDto loginDto){
-        if(!ModelState.IsValid){
+    public async Task<IActionResult> Login(LoginDto loginDto)
+    {
+        if (!ModelState.IsValid)
+        {
             return BadRequest(ModelState);
         }
         var user = await _userManager.Users.FirstOrDefaultAsync(x => x.Email == loginDto.Email.ToLower());
-        if(user == null) return Unauthorized("Invalid user name");
-        var result = await _signInManager.CheckPasswordSignInAsync(user ,loginDto.Password,false );
-        if(!result.Succeeded) return Unauthorized("UserName not found or password incorrect");
+        if (user == null) return Unauthorized("Invalid user name");
+        var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
+        if (!result.Succeeded) return Unauthorized("UserName not found or password incorrect");
         return Ok(user.ToUserDto(_tokenService.CreateToken(user)));
+    }
+    [HttpGet("by-position")]
+    public async Task<IActionResult> GetUsersByPosition([FromQuery] string position)
+    {
+        var users = await _accountManager.GetUsers(position);
+        return Ok(users);
     }
 
     [HttpPost]

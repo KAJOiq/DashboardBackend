@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Nas\\Ticket\\wwwroot\\upload\\0cec412a-4c3b-45e0-9c52-37d47a80ad02_a99f8270-03d6-4684-ac1b-37cdd9ba9cdb.webp",
+      "PackagePath": "staticwebassets\\upload\\0cec412a-4c3b-45e0-9c52-37d47a80ad02_a99f8270-03d6-4684-ac1b-37cdd9ba9cdb.webp"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Ticket.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Ticket.props",
+      "PackagePath": "build\\Ticket.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Ticket.props",
+      "PackagePath": "buildMultiTargeting\\Ticket.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Ticket.props",
+      "PackagePath": "buildTransitive\\Ticket.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
