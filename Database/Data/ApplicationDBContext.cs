@@ -12,6 +12,8 @@ namespace Ticket.Data
         public DbSet<Department> Department { get; set; } = null!;
         public DbSet<UserDepartment> UserDepartment { get; set; } = null!;
         public DbSet<Models.Ticket> Ticket { get; set; } = null!;
+        public DbSet<MainProblem> MainProblems { get; set; } = null!;
+        public DbSet<SubProblem> SubProblems { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -74,6 +76,16 @@ namespace Ticket.Data
             builder.Entity<Models.Ticket>()
                 .Property(o => o.Status)
                 .HasConversion<string>();
+
+            builder.Entity<Department>()
+                .HasMany(s => s.MainProblems)
+                .WithOne(x => x.Department)
+                .HasForeignKey(ud => ud.DepartmentId);
+
+            builder.Entity<MainProblem>()
+                .HasMany(s => s.SubProblems)
+                .WithOne(x => x.MainProblem)
+                .HasForeignKey(ud => ud.MainProblemId);
 
             List<IdentityRole> roles =
             [

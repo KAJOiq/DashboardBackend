@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JAK1j58xliQVDFsJrR1eQZHgYlkSuki+QAx9Qxmcw/U=",
+  "Hash": "hYYyo5CFHjzJVsAh0HC6U0YsGT4QOMIm8ZlIu0qUSeE=",
   "Source": "Ticket",
   "BasePath": "_content/Ticket",
   "Mode": "Default",
@@ -34,6 +34,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\upload\\0cec412a-4c3b-45e0-9c52-37d47a80ad02_a99f8270-03d6-4684-ac1b-37cdd9ba9cdb.webp"
+    },
+    {
+      "Identity": "C:\\Nas\\Ticket\\wwwroot\\upload\\16767ecd-3623-4e12-a2d7-b5833d5dd068_Frame.png",
+      "SourceId": "Ticket",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Nas\\Ticket\\wwwroot\\",
+      "BasePath": "_content/Ticket",
+      "RelativePath": "upload/16767ecd-3623-4e12-a2d7-b5833d5dd068_Frame.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\upload\\16767ecd-3623-4e12-a2d7-b5833d5dd068_Frame.png"
     }
   ]
 }

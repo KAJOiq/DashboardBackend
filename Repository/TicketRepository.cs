@@ -70,6 +70,10 @@ public class TicketRepository(ApplicationDBContext context, ITicketStatusManager
         {
             throw new Exception("Invalid status transition");
         }
+        
+        if(newStatus == TicketStatus.Done){
+            ticket.ClosedAt = DateTime.UtcNow;
+        }
 
         ticket.Status = newStatus;
         await _context.SaveChangesAsync();

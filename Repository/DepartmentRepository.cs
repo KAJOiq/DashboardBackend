@@ -40,7 +40,7 @@ public class DepartmentRepository(ApplicationDBContext context) : IDepartmentRep
         var department = await _context.Department.FirstOrDefaultAsync(i => i.Id == id);
         if (department == null)
         {
-            throw new KeyNotFoundException($"Company ID {id} not found.");
+            throw new KeyNotFoundException($"Department ID {id} not found.");
         }
         return department;
     }

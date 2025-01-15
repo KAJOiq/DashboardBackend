@@ -26,6 +26,8 @@ builder.Services.AddScoped<ITicketStatusManager , TicketStatusManager>();
 builder.Services.AddScoped<ITicketPriorityManager , TicketPriorityManager>();
 builder.Services.AddScoped<IAccountManager , AccountManagerRepository>();
 builder.Services.AddScoped<IImageService,ImageService>();
+builder.Services.AddScoped<IMainProblemRepository,MainProblemRepository>();
+builder.Services.AddScoped<ISubProblemRepository,SubProblemRepository>();
 
 builder.Services.AddControllers();
 
