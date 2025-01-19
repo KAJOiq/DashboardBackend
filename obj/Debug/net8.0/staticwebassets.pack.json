@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\upload\\16767ecd-3623-4e12-a2d7-b5833d5dd068_Frame.png"
     },
     {
+      "Id": "C:\\Nas\\Ticket\\wwwroot\\upload\\2ff3263c-7bef-4723-b94e-652beee38180_8188499d3fff7dcec871ed73775cd9d1.png",
+      "PackagePath": "staticwebassets\\upload\\2ff3263c-7bef-4723-b94e-652beee38180_8188499d3fff7dcec871ed73775cd9d1.png"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Ticket.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

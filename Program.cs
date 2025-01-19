@@ -9,51 +9,89 @@ using Ticket.Interfaces;
 using Ticket.Services;
 using Ticket.Dtos.Account;
 using Ticket.Repository;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<ApplicationDBContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("WebApiDatabase"))
            .ConfigureWarnings(warnings => warnings.Ignore(RelationalEventId.PendingModelChangesWarning)));
-           
-builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JWT"));
 
-builder.Services.AddScoped<ITokenService,TokenService>();
-builder.Services.AddScoped<IDepartmentRepository,DepartmentRepository>();
-builder.Services.AddScoped<IUserDepartmentRepository,UserDepartmentRepository>();
-builder.Services.AddScoped<ITicketRepository , TicketRepository>();
-builder.Services.AddScoped<ITicketStatusManager , TicketStatusManager>();
-builder.Services.AddScoped<ITicketPriorityManager , TicketPriorityManager>();
-builder.Services.AddScoped<IAccountManager , AccountManagerRepository>();
-builder.Services.AddScoped<IImageService,ImageService>();
-builder.Services.AddScoped<IMainProblemRepository,MainProblemRepository>();
-builder.Services.AddScoped<ISubProblemRepository,SubProblemRepository>();
-builder.Services.AddScoped<IRepliesRepository,RepliesRepository>();
+builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JWT"));
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddScoped<IUserInformationFromToken, UserInformationFromToken>();
+builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+builder.Services.AddScoped<IUserDepartmentRepository, UserDepartmentRepository>();
+builder.Services.AddScoped<ITicketRepository, TicketRepository>();
+builder.Services.AddScoped<ITicketStatusManager, TicketStatusManager>();
+builder.Services.AddScoped<ITicketPriorityManager, TicketPriorityManager>();
+builder.Services.AddScoped<IAccountManager, AccountManagerRepository>();
+builder.Services.AddScoped<IImageService, ImageService>();
+builder.Services.AddScoped<IMainProblemRepository, MainProblemRepository>();
+builder.Services.AddScoped<ISubProblemRepository, SubProblemRepository>();
+builder.Services.AddScoped<IRepliesRepository, RepliesRepository>();
 
 builder.Services.AddControllers();
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Technical Support API", Version = "v1" });
 
+    // Add JWT Authentication to Swagger
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "Enter 'Bearer' followed by a space and your JWT token."
+    });
+
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Name= "Bearer",
+                In = ParameterLocation.Header,
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            new List<string>()
+        }
+    });
+});
 builder.Logging.AddConfiguration(builder.Configuration.GetSection("Logging"));
 builder.Logging.AddConsole();
 
-builder.Services.AddIdentity<User,IdentityRole>(options => {
+builder.Services.AddIdentity<User, IdentityRole>(options =>
+{
     options.Password.RequiredLength = 12;
 }).AddEntityFrameworkStores<ApplicationDBContext>();
 
-builder.Services.AddAuthentication(options => {
+builder.Services.AddAuthentication(options =>
+{
     options.DefaultAuthenticateScheme =
-    options.DefaultChallengeScheme = 
+    options.DefaultChallengeScheme =
     options.DefaultForbidScheme =
     options.DefaultScheme =
-    options.DefaultSignInScheme = 
+    options.DefaultSignInScheme =
     options.DefaultSignOutScheme = JwtBearerDefaults.AuthenticationScheme;
-}).AddJwtBearer(options => {
-    options.TokenValidationParameters = new TokenValidationParameters {
+}).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
         ValidateIssuer = true,
+        ValidateLifetime = true,
         ValidIssuer = builder.Configuration["JWT:Issuer"],
         ValidateAudience = true,
         ValidAudience = builder.Configuration["JWT:Audience"],

@@ -6,6 +6,8 @@ using Ticket.Interfaces;
 using Ticket.Models;
 using System.Security.Claims;
 using Ticket.Mappers;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Ticket.Controllers;
 
@@ -141,4 +143,32 @@ public class AccountController(UserManager<User> userManager, ITokenService toke
             return BadRequest(ex.Message);
         }
     }
+
+    [Authorize]
+
+    [HttpGet("user-id")]
+    public async Task<IActionResult> GetUserIdFromDatabase()
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier) 
+            ?? User.FindFirstValue("sub") 
+            ?? User.FindFirstValue("uid")
+            ?? User.Claims.FirstOrDefault(c => c.Type.ToLower().Contains("userid"))?.Value;
+
+        if (string.IsNullOrEmpty(userId))
+        {
+            // If we still can't find the user ID, let's log all claims for debugging
+            var claims = User.Claims.Select(c => new { c.Type, c.Value }).ToList();
+            return BadRequest(new { Message = "userId is missing in the token.", Claims = claims });
+        }
+
+        var user = await _userManager.FindByIdAsync(userId);
+
+        if (user == null)
+        {
+            return NotFound($"User not found for ID: {userId}");
+        }
+
+        return Ok(new { UserId = user.Id });
+    }
+
 }
