@@ -4,7 +4,7 @@ namespace Ticket.Models;
 public class Ticket
 {
     public int Id { get; set; }
-    public Guid CustomerId { set; get; }
+    public string? CustomerId { set; get; }
     public User? User { set; get; } = null!;
     public int DepartmentId { set; get; }
     public Department department {set; get;} = null!;

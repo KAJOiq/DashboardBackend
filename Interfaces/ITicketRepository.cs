@@ -7,4 +7,6 @@ public interface ITicketRepository
     Task<Models.Ticket> UpdateStatus(int id, UpdateStatusDto dto);
     Task<Models.Ticket> UpdatePriority(int id, UpdatePriorityDto dto);
     Task<Models.Ticket> CreateAsync(Models.Ticket ticket);
+    Task<Models.Ticket> Assign(int ticketId ,string userId);
+
 }

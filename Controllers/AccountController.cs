@@ -13,13 +13,14 @@ namespace Ticket.Controllers;
 
 [Route("api/account")]
 [ApiController]
-public class AccountController(UserManager<User> userManager, ITokenService tokenService, SignInManager<User> signInManager, IAccountManager accountManager, IImageService imageService) : ControllerBase
+public class AccountController(UserManager<User> userManager, ITokenService tokenService, SignInManager<User> signInManager, IAccountManager accountManager, IImageService imageService ,RoleManager<IdentityRole> roleManager) : ControllerBase
 {
     private readonly UserManager<User> _userManager = userManager;
     private readonly ITokenService _tokenService = tokenService;
     private readonly SignInManager<User> _signInManager = signInManager;
     private readonly IAccountManager _accountManager = accountManager;
     private readonly IImageService _imageService = imageService;
+    private readonly RoleManager<IdentityRole> _roleManager = roleManager;
 
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromForm] RegisterDto register, IFormFile image)
@@ -41,7 +42,14 @@ public class AccountController(UserManager<User> userManager, ITokenService toke
             var createUser = await _userManager.CreateAsync(user, register.Password ?? "");
             if (createUser.Succeeded)
             {
-                var roleResult = await _userManager.AddToRoleAsync(user, "User");
+                var role = await _roleManager.FindByIdAsync(register.RoleId);
+                if (role == null)
+                {
+                    return NotFound($"Role with ID {register.RoleId} not found.");
+                }
+
+                // Assign the role to the user
+                var roleResult = await _userManager.AddToRoleAsync(user, role.Name);
                 if (roleResult.Succeeded)
                 {
                     return Ok("account created successfully");
@@ -149,8 +157,8 @@ public class AccountController(UserManager<User> userManager, ITokenService toke
     [HttpGet("user-id")]
     public async Task<IActionResult> GetUserIdFromDatabase()
     {
-        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier) 
-            ?? User.FindFirstValue("sub") 
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier)
+            ?? User.FindFirstValue("sub")
             ?? User.FindFirstValue("uid")
             ?? User.Claims.FirstOrDefault(c => c.Type.ToLower().Contains("userid"))?.Value;
 

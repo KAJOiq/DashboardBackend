@@ -25,4 +25,6 @@ public class RegisterDto
     public string Address {get; set;} = string.Empty;
     [Required]
     public DateTime EmploymentDate {get; set;} 
+    [Required]
+    public string RoleId {get; set;} = string.Empty;
 }

@@ -7,8 +7,8 @@ public static class AccountMapper
     public static NewUserDto ToUserDto(this User userModel,string token)
     {
         return new NewUserDto(
-            userModel.Email,
-            userModel.UserName,
+            userModel.Email??"",
+            userModel.UserName??"",
             token
         );
     }

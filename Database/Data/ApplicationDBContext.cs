@@ -96,13 +96,18 @@ namespace Ticket.Data
             [
                 new()
                 {
-                    Name = "Admin",
-                    NormalizedName = "ADMIN"
+                    Name = "Manager",
+                    NormalizedName = "MANAGER"
                 },
                 new()
                 {
-                    Name = "User",
-                    NormalizedName = "USER"
+                    Name = "Employee",
+                    NormalizedName = "EMPLOYEE"
+                },
+                new()
+                {
+                    Name = "Customer",
+                    NormalizedName = "CUSTOMER"
                 },
             ];
             builder.Entity<IdentityRole>().HasData(roles);

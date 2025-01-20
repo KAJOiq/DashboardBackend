@@ -1,14 +1,42 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Ticket.Data;
 using Ticket.Dtos.Account;
 using Ticket.Interfaces;
 using Ticket.Models;
 
 namespace Ticket.Services;
-public class UserInformationFromToken(UserManager<User> userManager, IHttpContextAccessor httpContextAccessor) : IUserInformationFromToken
+public class UserInformationFromToken(UserManager<User> userManager, IHttpContextAccessor httpContextAccessor, ApplicationDBContext context) : IUserInformationFromToken
 {
     private readonly UserManager<User> _userManager = userManager;
     private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
+    private readonly ApplicationDBContext _context = context;
+
+    public async Task<string> GetManagerId(int departmentId)
+    {
+        var userDepartment = await _context.UserDepartment
+        .FirstOrDefaultAsync(ud => ud.DepartmentId == departmentId);
+
+        if (userDepartment == null)
+        {
+            throw new Exception("no department with this id");
+        }
+
+        var user = await _userManager.FindByIdAsync(userDepartment.UserId);
+        if (user == null)
+        {
+            throw new Exception("no user");
+        }
+
+        var isManager = await _userManager.IsInRoleAsync(user, "Manager");
+        if (!isManager)
+        {
+            throw new Exception("there is no manager");
+        }
+        return user.Id;
+    }
+
     public async Task<UserInfoDto> GetUserIdFromDatabase()
     {
         var httpContext = _httpContextAccessor.HttpContext;
@@ -31,13 +59,25 @@ public class UserInformationFromToken(UserManager<User> userManager, IHttpContex
         }
 
         var appUser = await _userManager.FindByIdAsync(userId);
-
         if (appUser == null)
         {
             throw new Exception($"User not found for ID: {userId}");
         }
+        var department = await _context.UserDepartment.FirstAsync(s => s.UserId == userId);
 
-        return new UserInfoDto { UserId = appUser.Id };
+        if (department == null)
+        {
+            throw new Exception($"department not set for this user ID: {userId}");
+        }
+
+        var isCustomer = await _userManager.IsInRoleAsync(appUser, "Manager");
+
+
+        return new UserInfoDto
+        {
+            UserId = appUser.Id,
+            UserDepartment = department.DepartmentId
+        };
     }
 }
 

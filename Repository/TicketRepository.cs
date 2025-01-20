@@ -11,6 +11,19 @@ public class TicketRepository(ApplicationDBContext context, ITicketStatusManager
     private readonly ApplicationDBContext _context = context;
     private readonly ITicketPriorityManager _ticketPriorityManager = ticketPriorityManager;
 
+    public async Task<Models.Ticket> Assign(int ticketId ,string userId)
+    {
+        var ticket = await _context.Ticket.FindAsync(ticketId);
+        if (ticket == null)
+        {
+            throw new KeyNotFoundException($"Ticket ID {ticketId} not found.");
+        }
+        ticket.AssignId = userId;
+        await _context.SaveChangesAsync();
+
+        return ticket;
+    }
+
     public async Task<Models.Ticket> CreateAsync(Models.Ticket ticket)
     {
         await _context.Ticket.AddAsync(ticket);
