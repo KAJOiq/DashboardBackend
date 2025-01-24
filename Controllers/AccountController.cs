@@ -1,15 +1,15 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Ticket.Dtos.Account;
-using Ticket.Interfaces;
-using Ticket.Models;
+using projects.Dtos.Account;
+using projects.Interfaces;
+using projects.Models;
 using System.Security.Claims;
-using Ticket.Mappers;
-using System.IdentityModel.Tokens.Jwt;
+using projects.Mappers;
 using Microsoft.AspNetCore.Authorization;
+using Ticket.Interfaces;
 
-namespace Ticket.Controllers;
+namespace projects.Controllers;
 
 [Route("api/account")]
 [ApiController]

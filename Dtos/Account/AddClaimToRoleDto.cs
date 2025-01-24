@@ -1,4 +1,4 @@
-namespace Ticket.Dtos.Account;
+namespace projects.Dtos.Account;
 public class AddClaimToRoleDto
 {
     public string RoleName { get; set; } = string.Empty;

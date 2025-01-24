@@ -1,9 +1,9 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
-using Ticket.Dtos.Account;
-using Ticket.Models;
+using projects.Dtos.Account;
+using projects.Models;
 
-namespace Ticket.Interfaces;
+namespace projects.Interfaces;
 public interface IAccountManager
 {
     Task<List<User>> GetUsers(string position);

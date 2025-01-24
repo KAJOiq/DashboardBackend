@@ -1,4 +1,4 @@
-namespace Ticket.Dtos.Account;
+namespace projects.Dtos.Account;
 public class JwtSettings
 {
     public string SigningKey { get; set; } = string.Empty;

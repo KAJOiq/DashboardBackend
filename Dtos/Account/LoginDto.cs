@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Ticket.Dtos.Account;
+namespace projects.Dtos.Account;
 public class LoginDto
 {
     [Required]

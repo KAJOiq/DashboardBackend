@@ -3,11 +3,11 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using Ticket.Dtos.Account;
+using projects.Dtos.Account;
 using Ticket.Interfaces;
-using Ticket.Models;
+using projects.Models;
 
-namespace Ticket.Services;
+namespace projects.Services;
 public class TokenService(IConfiguration configuration, IOptions<JwtSettings> jwtSettings) : ITokenService
 {
     private readonly IConfiguration _configuration = configuration;

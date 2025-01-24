@@ -1,6 +1,6 @@
-using Ticket.Dtos.Account;
+using projects.Dtos.Account;
 
-namespace Ticket.Interfaces;
+namespace projects.Interfaces;
 public interface IUserInformationFromToken
 {
     Task<UserInfoDto> GetUserIdFromDatabase();

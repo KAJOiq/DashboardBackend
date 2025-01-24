@@ -1,7 +1,6 @@
 using System.ComponentModel.DataAnnotations;
-using Microsoft.Net.Http.Headers;
 
-namespace Ticket.Dtos.Account;
+namespace projects.Dtos.Account;
 public class RegisterDto
 {
     [Required]

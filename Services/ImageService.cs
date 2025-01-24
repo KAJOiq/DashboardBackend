@@ -1,6 +1,6 @@
-using Ticket.Interfaces;
+using projects.Interfaces;
 
-namespace Ticket.Services;
+namespace projects.Services;
 public class ImageService(IWebHostEnvironment webHostEnvironment) : IImageService
 {
     private readonly IWebHostEnvironment _webHostEnvironment = webHostEnvironment;

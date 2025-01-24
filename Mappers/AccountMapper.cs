@@ -1,7 +1,7 @@
-using Ticket.Dtos.Account;
-using Ticket.Models;
+using projects.Dtos.Account;
+using projects.Models;
 
-namespace Ticket.Mappers;
+namespace projects.Mappers;
 public static class AccountMapper
 {
     public static NewUserDto ToUserDto(this User userModel,string token)

@@ -1,4 +1,4 @@
-namespace Ticket.Dtos.Account;
+namespace projects.Dtos.Account;
 public class UserInfoDto
 {
     public string? UserId {set; get;}

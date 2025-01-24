@@ -1,11 +1,11 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Ticket.Dtos.Account;
-using Ticket.Interfaces;
-using Ticket.Models;
+using projects.Dtos.Account;
+using projects.Interfaces;
+using projects.Models;
 
-namespace Ticket.Repository;
+namespace projects.Repository;
 public class AccountManagerRepository(RoleManager<IdentityRole> roleManager, UserManager<User> userManager) : IAccountManager
 {
     private readonly UserManager<User> _userManager = userManager;

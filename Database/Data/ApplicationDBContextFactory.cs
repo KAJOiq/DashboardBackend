@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-using Ticket.Data;
+using projects.Data;
 
-namespace Ticket.Database.Data;
+namespace projects.Database.Data;
 public class ApplicationDBContextFactory : IDesignTimeDbContextFactory<ApplicationDBContext>
 {
     public ApplicationDBContext CreateDbContext(string[] args)

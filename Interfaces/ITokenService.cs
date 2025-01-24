@@ -1,4 +1,4 @@
-using Ticket.Models;
+using projects.Models;
 
 namespace Ticket.Interfaces;
 public interface ITokenService

@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace Ticket.Contracts;
+namespace projects.Contracts;
 
 public class PaginatedResponse<T>
 {                              

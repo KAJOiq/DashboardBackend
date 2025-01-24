@@ -5169,11 +5169,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Nas\\Ticket\\Ticket.csproj",
+      "projectUniqueName": "C:\\hasan\\projects\\Ticket.csproj",
       "projectName": "Ticket",
-      "projectPath": "C:\\Nas\\Ticket\\Ticket.csproj",
+      "projectPath": "C:\\hasan\\projects\\Ticket.csproj",
       "packagesPath": "C:\\Users\\nass1\\.nuget\\packages\\",
-      "outputPath": "C:\\Nas\\Ticket\\obj\\",
+      "outputPath": "C:\\hasan\\projects\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nass1\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -2,11 +2,11 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Ticket.Data;
-using Ticket.Dtos.Account;
-using Ticket.Interfaces;
-using Ticket.Models;
+using projects.Dtos.Account;
+using projects.Interfaces;
+using projects.Models;
 
-namespace Ticket.Services;
+namespace Project.Services;
 public class UserInformationFromToken(UserManager<User> userManager, IHttpContextAccessor httpContextAccessor, ApplicationDBContext context) : IUserInformationFromToken
 {
     private readonly UserManager<User> _userManager = userManager;
