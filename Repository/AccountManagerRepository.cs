@@ -56,7 +56,6 @@ public class AccountManagerRepository(RoleManager<IdentityRole> roleManager, Use
         }
 
         var users = await _userManager.Users
-            .Where(user => user.Position.ToLower() == position.ToLower())
             .ToListAsync();
 
         return users;

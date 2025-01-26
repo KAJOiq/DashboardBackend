@@ -9,7 +9,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Ticket.Migrations
 {
     /// <inheritdoc />
-    public partial class Initail : Migration
+    public partial class InitialMigration4 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -33,13 +33,8 @@ namespace Ticket.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "text", nullable: false),
-                    SecondPhone = table.Column<string>(type: "text", nullable: true),
-                    Position = table.Column<string>(type: "text", nullable: false),
                     Sex = table.Column<string>(type: "text", nullable: false),
                     DOB = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    Photo_url = table.Column<string>(type: "text", nullable: false),
-                    Address = table.Column<string>(type: "text", nullable: false),
-                    EmploymentDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UserName = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
@@ -58,19 +53,6 @@ namespace Ticket.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Department",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    DepartmentName = table.Column<string>(type: "text", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Department", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -179,85 +161,13 @@ namespace Ticket.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "Ticket",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    CustomerId = table.Column<Guid>(type: "uuid", nullable: false),
-                    DepartmentId = table.Column<int>(type: "integer", nullable: false),
-                    Title = table.Column<string>(type: "text", nullable: false),
-                    Description = table.Column<string>(type: "text", nullable: false),
-                    Note = table.Column<string>(type: "text", nullable: false),
-                    Photo_url = table.Column<string>(type: "text", nullable: false),
-                    Status = table.Column<string>(type: "text", nullable: false),
-                    Priority = table.Column<int>(type: "integer", nullable: false),
-                    AssignorId = table.Column<string>(type: "text", nullable: false),
-                    AssignId = table.Column<string>(type: "text", nullable: false),
-                    AssignId1 = table.Column<string>(type: "text", nullable: true),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    ClosedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Ticket", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Ticket_AspNetUsers_AssignId",
-                        column: x => x.AssignId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Ticket_AspNetUsers_AssignId1",
-                        column: x => x.AssignId1,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_Ticket_AspNetUsers_AssignorId",
-                        column: x => x.AssignorId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Ticket_Department_DepartmentId",
-                        column: x => x.DepartmentId,
-                        principalTable: "Department",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "UserDepartment",
-                columns: table => new
-                {
-                    UserId = table.Column<string>(type: "text", nullable: false),
-                    DepartmentId = table.Column<int>(type: "integer", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_UserDepartment", x => new { x.UserId, x.DepartmentId });
-                    table.ForeignKey(
-                        name: "FK_UserDepartment_AspNetUsers_UserId",
-                        column: x => x.UserId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_UserDepartment_Department_DepartmentId",
-                        column: x => x.DepartmentId,
-                        principalTable: "Department",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "73261b3e-7854-4db3-857b-45864c456dec", null, "User", "USER" },
-                    { "8daaa517-57b5-4931-b173-c32a2efc1478", null, "Admin", "ADMIN" }
+                    { "a8c81416-14a3-424a-af29-ee9d795d63cb", null, "Student", "STUDENT" },
+                    { "acf35d6f-fcba-4474-85f0-9e2841496183", null, "Supervisor", "SUPERVISOR" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -296,31 +206,6 @@ namespace Ticket.Migrations
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
                 unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Ticket_AssignId",
-                table: "Ticket",
-                column: "AssignId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Ticket_AssignId1",
-                table: "Ticket",
-                column: "AssignId1");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Ticket_AssignorId",
-                table: "Ticket",
-                column: "AssignorId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Ticket_DepartmentId",
-                table: "Ticket",
-                column: "DepartmentId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_UserDepartment_DepartmentId",
-                table: "UserDepartment",
-                column: "DepartmentId");
         }
 
         /// <inheritdoc />
@@ -342,19 +227,10 @@ namespace Ticket.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Ticket");
-
-            migrationBuilder.DropTable(
-                name: "UserDepartment");
-
-            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
-
-            migrationBuilder.DropTable(
-                name: "Department");
         }
     }
 }

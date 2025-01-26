@@ -1,15 +1,16 @@
 using Microsoft.AspNetCore.Identity;
-using Ticket.Data;
-using Ticket.Models;
+using projects.Data;
+using projects.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
-using Ticket.Interfaces;
-using Ticket.Services;
-using Ticket.Dtos.Account;
-using Ticket.Repository;
+using projects.Interfaces;
+using projects.Services;
+using projects.Dtos.Account;
+using projects.Repository;
 using Microsoft.OpenApi.Models;
+using Ticket.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,18 +21,9 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JWT"));
 builder.Services.AddHttpContextAccessor();
 
-builder.Services.AddScoped<IUserInformationFromToken, UserInformationFromToken>();
 builder.Services.AddScoped<ITokenService, TokenService>();
-builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
-builder.Services.AddScoped<IUserDepartmentRepository, UserDepartmentRepository>();
-builder.Services.AddScoped<ITicketRepository, TicketRepository>();
-builder.Services.AddScoped<ITicketStatusManager, TicketStatusManager>();
-builder.Services.AddScoped<ITicketPriorityManager, TicketPriorityManager>();
 builder.Services.AddScoped<IAccountManager, AccountManagerRepository>();
 builder.Services.AddScoped<IImageService, ImageService>();
-builder.Services.AddScoped<IMainProblemRepository, MainProblemRepository>();
-builder.Services.AddScoped<ISubProblemRepository, SubProblemRepository>();
-builder.Services.AddScoped<IRepliesRepository, RepliesRepository>();
 
 builder.Services.AddControllers();
 

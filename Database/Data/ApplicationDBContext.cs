@@ -24,18 +24,13 @@ namespace projects.Data
             [
                 new()
                 {
-                    Name = "Manager",
-                    NormalizedName = "MANAGER"
+                    Name = "Student",
+                    NormalizedName = "STUDENT"
                 },
                 new()
                 {
-                    Name = "Employee",
-                    NormalizedName = "EMPLOYEE"
-                },
-                new()
-                {
-                    Name = "Customer",
-                    NormalizedName = "CUSTOMER"
+                    Name = "Supervisor",
+                    NormalizedName = "SUPERVISOR"
                 },
             ];
             builder.Entity<IdentityRole>().HasData(roles);

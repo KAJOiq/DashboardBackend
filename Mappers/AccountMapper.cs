@@ -16,15 +16,10 @@ public static class AccountMapper
     {
         return new User
         {
-            SecondPhone = register.SecondPhone,
-            Position = register.SecondPhone,
             UserName = register.UserName,
             Email = register.Email,
-            Photo_url = imagePath,
             Sex = register.Sex,
             DOB = register.DOB,
-            Address = register.Address,
-            EmploymentDate = register.EmploymentDate
         };
     }
 
