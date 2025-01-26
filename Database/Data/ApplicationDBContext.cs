@@ -9,6 +9,8 @@ namespace projects.Data
     public class ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : IdentityDbContext<User>(options)
     {
         public DbSet<User> User { get; set; } = null!;
+        public DbSet<Project> Project { get; set; } = null!;
+        public DbSet<Students> Students { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
