@@ -25,7 +25,7 @@ public static class ProjectMapper
             Title = projectRequestDto.Title,
             Description = projectRequestDto.Description,
             Supervisor_Id = projectRequestDto.Supervisor_Id,
-            Deadline = projectRequestDto.Deadline,
+            Deadline = projectRequestDto.Deadline.ToUniversalTime(),
         };
     }
 }

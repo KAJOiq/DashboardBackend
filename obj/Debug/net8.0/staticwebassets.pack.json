@@ -1,20 +1,40 @@
 {
   "Files": [
     {
-      "Id": "C:\\hasan\\projects\\wwwroot\\upload\\0cec412a-4c3b-45e0-9c52-37d47a80ad02_a99f8270-03d6-4684-ac1b-37cdd9ba9cdb.webp",
+      "Id": "C:\\Users\\Kajo\\OneDrive\\Desktop\\backproject\\projects\\wwwroot\\upload\\0cec412a-4c3b-45e0-9c52-37d47a80ad02_a99f8270-03d6-4684-ac1b-37cdd9ba9cdb.webp",
       "PackagePath": "staticwebassets\\upload\\0cec412a-4c3b-45e0-9c52-37d47a80ad02_a99f8270-03d6-4684-ac1b-37cdd9ba9cdb.webp"
     },
     {
-      "Id": "C:\\hasan\\projects\\wwwroot\\upload\\16767ecd-3623-4e12-a2d7-b5833d5dd068_Frame.png",
+      "Id": "C:\\Users\\Kajo\\OneDrive\\Desktop\\backproject\\projects\\wwwroot\\upload\\16767ecd-3623-4e12-a2d7-b5833d5dd068_Frame.png",
       "PackagePath": "staticwebassets\\upload\\16767ecd-3623-4e12-a2d7-b5833d5dd068_Frame.png"
     },
     {
-      "Id": "C:\\hasan\\projects\\wwwroot\\upload\\2ff3263c-7bef-4723-b94e-652beee38180_8188499d3fff7dcec871ed73775cd9d1.png",
+      "Id": "C:\\Users\\Kajo\\OneDrive\\Desktop\\backproject\\projects\\wwwroot\\upload\\2ff3263c-7bef-4723-b94e-652beee38180_8188499d3fff7dcec871ed73775cd9d1.png",
       "PackagePath": "staticwebassets\\upload\\2ff3263c-7bef-4723-b94e-652beee38180_8188499d3fff7dcec871ed73775cd9d1.png"
     },
     {
-      "Id": "C:\\hasan\\projects\\wwwroot\\upload\\b957c70b-d7a8-4591-b609-7df509db32e1_462555171_4000430076943114_6716452946319358044_n.jpg",
+      "Id": "C:\\Users\\Kajo\\OneDrive\\Desktop\\backproject\\projects\\wwwroot\\upload\\3692d99c-4dae-4770-ba3a-a6b7f3ecf0f3_Frame.png",
+      "PackagePath": "staticwebassets\\upload\\3692d99c-4dae-4770-ba3a-a6b7f3ecf0f3_Frame.png"
+    },
+    {
+      "Id": "C:\\Users\\Kajo\\OneDrive\\Desktop\\backproject\\projects\\wwwroot\\upload\\5c23318d-e20d-494a-955a-b4ba0b540005_Frame.png",
+      "PackagePath": "staticwebassets\\upload\\5c23318d-e20d-494a-955a-b4ba0b540005_Frame.png"
+    },
+    {
+      "Id": "C:\\Users\\Kajo\\OneDrive\\Desktop\\backproject\\projects\\wwwroot\\upload\\6abf7013-b829-4f45-85cf-1061f9999337_Frame.png",
+      "PackagePath": "staticwebassets\\upload\\6abf7013-b829-4f45-85cf-1061f9999337_Frame.png"
+    },
+    {
+      "Id": "C:\\Users\\Kajo\\OneDrive\\Desktop\\backproject\\projects\\wwwroot\\upload\\a9af188f-a1df-45fb-b4cd-7f0b1fe2d52f_Frame.png",
+      "PackagePath": "staticwebassets\\upload\\a9af188f-a1df-45fb-b4cd-7f0b1fe2d52f_Frame.png"
+    },
+    {
+      "Id": "C:\\Users\\Kajo\\OneDrive\\Desktop\\backproject\\projects\\wwwroot\\upload\\b957c70b-d7a8-4591-b609-7df509db32e1_462555171_4000430076943114_6716452946319358044_n.jpg",
       "PackagePath": "staticwebassets\\upload\\b957c70b-d7a8-4591-b609-7df509db32e1_462555171_4000430076943114_6716452946319358044_n.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Ticket.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Ticket.Microsoft.AspNetCore.StaticWebAssets.props",

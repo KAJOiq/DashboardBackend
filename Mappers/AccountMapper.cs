@@ -19,8 +19,7 @@ public static class AccountMapper
             UserName = register.UserName,
             Email = register.Email,
             Sex = register.Sex,
-            DOB = register.DOB,
+            DOB = register.DOB.ToUniversalTime(),
         };
     }
-
 }

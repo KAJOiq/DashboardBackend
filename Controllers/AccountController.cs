@@ -23,7 +23,7 @@ public class AccountController(UserManager<User> userManager, ITokenService toke
     private readonly RoleManager<IdentityRole> _roleManager = roleManager;
 
     [HttpPost("register")]
-    public async Task<IActionResult> Register([FromForm] RegisterDto register, IFormFile image)
+    public async Task<IActionResult> Register([FromForm] RegisterDto register)
     {
         try
         {
@@ -34,10 +34,6 @@ public class AccountController(UserManager<User> userManager, ITokenService toke
 
             string? imagePath = null;
 
-            if (image != null)
-            {
-                imagePath = await _imageService.UploadImageAsync(image);
-            }
             var user = register.ToUserFormCreateDTO(imagePath!);
             var createUser = await _userManager.CreateAsync(user, register.Password ?? "");
             if (createUser.Succeeded)
@@ -82,6 +78,22 @@ public class AccountController(UserManager<User> userManager, ITokenService toke
         if (!result.Succeeded) return Unauthorized("UserName not found or password incorrect");
         return Ok(user.ToUserDto(_tokenService.CreateToken(user)));
     }
+
+    [HttpGet("all-users")]
+    public async Task<ActionResult<IEnumerable<IdentityUser>>> GetAlUsers()
+    {
+        var users = _userManager.Users.ToList();
+        var userList = new List<object>();
+
+        foreach (var user in users)
+        {
+            var roles = await _userManager.GetRolesAsync(user);
+            userList.Add(new { user.Id, user.UserName, user.Email, user.PhoneNumber, user.Sex, user.DOB, Roles = roles });
+        }
+
+        return Ok(userList);
+    }
+
     [HttpGet("by-position")]
     public async Task<IActionResult> GetUsersByPosition([FromQuery] string position)
     {

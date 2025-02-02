@@ -5,6 +5,8 @@ using projects.Mappers;
 using projects.Services;
 
 namespace projects.Controllers;
+[Route("api/project")]
+[ApiController]
 public class ProjectController(IProjectRepository projectRepository,IImageService imageService) : ControllerBase
 {
     private readonly IProjectRepository _projectRepository = projectRepository;

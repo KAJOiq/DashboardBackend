@@ -24,6 +24,8 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IAccountManager, AccountManagerRepository>();
 builder.Services.AddScoped<IImageService, ImageService>();
+builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
+
 
 builder.Services.AddControllers();
 
@@ -92,6 +94,20 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
+
+int preFlightMaxAge = int.Parse(builder.Configuration.GetSection("Cors")["PreFlightMaxAge"]);
+builder.Services.AddCors(options => {
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.AllowAnyOrigin();
+        builder.AllowAnyHeader();
+        builder.AllowAnyMethod();
+        //builder.WithMethods();
+        //builder.AllowCredentials();
+        builder.SetPreflightMaxAge(TimeSpan.FromMinutes(preFlightMaxAge));
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -101,6 +117,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
