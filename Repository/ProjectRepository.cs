@@ -30,7 +30,7 @@ public class ProjectRepository(ApplicationDBContext context) : IProjectRepositor
 
     public async Task<PaginatedResponse<Project>> GetAllAsync(ProjectQueryDto projectQueryDto)
     {
-        IQueryable<Project> query = _context.Project;
+        IQueryable<Project> query = _context.Project.Include(p => p.Students);
 
         return await PaginatedResponse<Project>.CreateAsync(query, projectQueryDto.CurrentPage, projectQueryDto.PageSize);
     }

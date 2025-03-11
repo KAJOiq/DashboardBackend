@@ -11,6 +11,8 @@ using projects.Dtos.Account;
 using projects.Repository;
 using Microsoft.OpenApi.Models;
 using Ticket.Interfaces;
+using DashboardBackend.Interfaces;
+using DashboardBackend.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,7 +27,8 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IAccountManager, AccountManagerRepository>();
 builder.Services.AddScoped<IImageService, ImageService>();
 builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
-
+builder.Services.AddScoped<IUserInformationFromToken,UserInformationFromToken>();
+builder.Services.AddScoped<IStudentRepository,StudentRepository>();
 
 builder.Services.AddControllers();
 

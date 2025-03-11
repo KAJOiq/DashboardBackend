@@ -13,7 +13,7 @@ namespace projects.Controllers;
 
 [Route("api/account")]
 [ApiController]
-public class AccountController(UserManager<User> userManager, ITokenService tokenService, SignInManager<User> signInManager, IAccountManager accountManager, IImageService imageService ,RoleManager<IdentityRole> roleManager) : ControllerBase
+public class AccountController(UserManager<User> userManager, ITokenService tokenService, SignInManager<User> signInManager, IAccountManager accountManager, IImageService imageService, RoleManager<IdentityRole> roleManager) : ControllerBase
 {
     private readonly UserManager<User> _userManager = userManager;
     private readonly ITokenService _tokenService = tokenService;
@@ -65,6 +65,7 @@ public class AccountController(UserManager<User> userManager, ITokenService toke
             return StatusCode(500, e);
         }
     }
+    
     [HttpPost("login")]
     public async Task<IActionResult> Login(LoginDto loginDto)
     {
@@ -72,12 +73,23 @@ public class AccountController(UserManager<User> userManager, ITokenService toke
         {
             return BadRequest(ModelState);
         }
+
         var user = await _userManager.Users.FirstOrDefaultAsync(x => x.Email == loginDto.Email.ToLower());
-        if (user == null) return Unauthorized("Invalid user name");
+        if (user == null) return Unauthorized("Invalid email");
+
         var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
         if (!result.Succeeded) return Unauthorized("UserName not found or password incorrect");
-        return Ok(user.ToUserDto(_tokenService.CreateToken(user)));
+
+        // Retrieve the roles of the user
+        var roles = await _userManager.GetRolesAsync(user);
+
+        return Ok(new
+        {
+            User = user.ToUserDto(_tokenService.CreateToken(user)),
+            Roles = roles
+        });
     }
+
 
     [HttpGet("all-users")]
     public async Task<ActionResult<IEnumerable<IdentityUser>>> GetAlUsers()
