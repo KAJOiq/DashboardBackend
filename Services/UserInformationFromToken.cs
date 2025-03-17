@@ -4,14 +4,14 @@ using Microsoft.AspNetCore.Identity;
 using projects.Dtos.Account;
 using projects.Models;
 
-namespace projects.Services;
+namespace DashboardBackend.Services;
 public class UserInformationFromToken(UserManager<User> userManager, IHttpContextAccessor httpContextAccessor) : IUserInformationFromToken
 {
     private readonly UserManager<User> _userManager = userManager;
     private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
 
     
-    public async Task<UserInfoDto> GetUserIdFromDatabase()
+    public async Task<project.Dtos.Account.UserInfoDto> GetUserIdFromDatabase()
     {
         var httpContext = _httpContextAccessor.HttpContext;
         if (httpContext == null)
@@ -38,15 +38,10 @@ public class UserInformationFromToken(UserManager<User> userManager, IHttpContex
             throw new Exception($"User not found for ID: {userId}");
         }
 
-        return new UserInfoDto
+        return new project.Dtos.Account.UserInfoDto
         {
             UserId = appUser.Id,
         };
-    }
-
-    Task<Ticket.Dtos.Account.UserInfoDto> IUserInformationFromToken.GetUserIdFromDatabase()
-    {
-        throw new NotImplementedException();
     }
 }
 public class UserIdMissingException : Exception

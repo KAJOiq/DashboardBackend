@@ -1,6 +1,7 @@
 using DashboardBackend.Dtos.Student;
 using DashboardBackend.Interfaces;
 using DashboardBackend.Mappers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DashboardBackend.Controllers;
@@ -11,6 +12,7 @@ public class StudentController(IStudentRepository studentRepository, IUserInform
     private readonly IUserInformationFromToken _userInfo = userInformationFromToken;
     private readonly IStudentRepository _studentRepository = studentRepository;
     [HttpPost]
+    [Authorize]
     [Route("vote")]
     public async Task<IActionResult> Vote(StudentVoteDto studentVoteDto)
     {

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KSmJkt48MNcOUT6P1kA51v5HkgInFFmeMmBp9F2YLok=",
+  "Hash": "3gQFxgiSnjkA+l2gFR85vyofA5pRbnvFciDkJs5RqWY=",
   "Source": "Ticket",
   "BasePath": "_content/Ticket",
   "Mode": "Default",
@@ -10,163 +10,1558 @@
     {
       "Name": "Ticket\\wwwroot",
       "Source": "Ticket",
-      "ContentRoot": "C:\\hasan\\DashboardBackend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\",
       "BasePath": "_content/Ticket",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\hasan\\DashboardBackend\\wwwroot\\upload\\0cec412a-4c3b-45e0-9c52-37d47a80ad02_a99f8270-03d6-4684-ac1b-37cdd9ba9cdb.webp",
+      "Identity": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\0cec412a-4c3b-45e0-9c52-37d47a80ad02_a99f8270-03d6-4684-ac1b-37cdd9ba9cdb.webp",
       "SourceId": "Ticket",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\hasan\\DashboardBackend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\",
       "BasePath": "_content/Ticket",
-      "RelativePath": "upload/0cec412a-4c3b-45e0-9c52-37d47a80ad02_a99f8270-03d6-4684-ac1b-37cdd9ba9cdb.webp",
+      "RelativePath": "upload/0cec412a-4c3b-45e0-9c52-37d47a80ad02_a99f8270-03d6-4684-ac1b-37cdd9ba9cdb#[.{fingerprint}]?.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "cdc20pk0vy",
+      "Integrity": "IO//IDH4/Cch1dqoGatvJfWQeOHuQHkadYI7kJqR6kE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\upload\\0cec412a-4c3b-45e0-9c52-37d47a80ad02_a99f8270-03d6-4684-ac1b-37cdd9ba9cdb.webp"
     },
     {
-      "Identity": "C:\\hasan\\DashboardBackend\\wwwroot\\upload\\16767ecd-3623-4e12-a2d7-b5833d5dd068_Frame.png",
+      "Identity": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\16767ecd-3623-4e12-a2d7-b5833d5dd068_Frame.png",
       "SourceId": "Ticket",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\hasan\\DashboardBackend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\",
       "BasePath": "_content/Ticket",
-      "RelativePath": "upload/16767ecd-3623-4e12-a2d7-b5833d5dd068_Frame.png",
+      "RelativePath": "upload/16767ecd-3623-4e12-a2d7-b5833d5dd068_Frame#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "nra38rdbei",
+      "Integrity": "Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\upload\\16767ecd-3623-4e12-a2d7-b5833d5dd068_Frame.png"
     },
     {
-      "Identity": "C:\\hasan\\DashboardBackend\\wwwroot\\upload\\2ff3263c-7bef-4723-b94e-652beee38180_8188499d3fff7dcec871ed73775cd9d1.png",
+      "Identity": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\2ff3263c-7bef-4723-b94e-652beee38180_8188499d3fff7dcec871ed73775cd9d1.png",
       "SourceId": "Ticket",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\hasan\\DashboardBackend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\",
       "BasePath": "_content/Ticket",
-      "RelativePath": "upload/2ff3263c-7bef-4723-b94e-652beee38180_8188499d3fff7dcec871ed73775cd9d1.png",
+      "RelativePath": "upload/2ff3263c-7bef-4723-b94e-652beee38180_8188499d3fff7dcec871ed73775cd9d1#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "mlks3ra1k6",
+      "Integrity": "tpk+ng02yq2/q1w5yvBV7251LwpUfjBbF8mK6i/RMTg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\upload\\2ff3263c-7bef-4723-b94e-652beee38180_8188499d3fff7dcec871ed73775cd9d1.png"
     },
     {
-      "Identity": "C:\\hasan\\DashboardBackend\\wwwroot\\upload\\3692d99c-4dae-4770-ba3a-a6b7f3ecf0f3_Frame.png",
+      "Identity": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\34db3578-8b52-4bf7-84b3-92d65fc94999_بحث التخرج .pdf",
       "SourceId": "Ticket",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\hasan\\DashboardBackend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\",
       "BasePath": "_content/Ticket",
-      "RelativePath": "upload/3692d99c-4dae-4770-ba3a-a6b7f3ecf0f3_Frame.png",
+      "RelativePath": "upload/34db3578-8b52-4bf7-84b3-92d65fc94999_بحث التخرج #[.{fingerprint}]?.pdf",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "vhzah80cul",
+      "Integrity": "M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\upload\\34db3578-8b52-4bf7-84b3-92d65fc94999_بحث التخرج .pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\3692d99c-4dae-4770-ba3a-a6b7f3ecf0f3_Frame.png",
+      "SourceId": "Ticket",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\",
+      "BasePath": "_content/Ticket",
+      "RelativePath": "upload/3692d99c-4dae-4770-ba3a-a6b7f3ecf0f3_Frame#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nra38rdbei",
+      "Integrity": "Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\upload\\3692d99c-4dae-4770-ba3a-a6b7f3ecf0f3_Frame.png"
     },
     {
-      "Identity": "C:\\hasan\\DashboardBackend\\wwwroot\\upload\\5c23318d-e20d-494a-955a-b4ba0b540005_Frame.png",
+      "Identity": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\397caa83-fab1-4d08-8947-b76dec949184_بحث التخرج .pdf",
       "SourceId": "Ticket",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\hasan\\DashboardBackend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\",
       "BasePath": "_content/Ticket",
-      "RelativePath": "upload/5c23318d-e20d-494a-955a-b4ba0b540005_Frame.png",
+      "RelativePath": "upload/397caa83-fab1-4d08-8947-b76dec949184_بحث التخرج #[.{fingerprint}]?.pdf",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "vhzah80cul",
+      "Integrity": "M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\upload\\397caa83-fab1-4d08-8947-b76dec949184_بحث التخرج .pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\5c23318d-e20d-494a-955a-b4ba0b540005_Frame.png",
+      "SourceId": "Ticket",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\",
+      "BasePath": "_content/Ticket",
+      "RelativePath": "upload/5c23318d-e20d-494a-955a-b4ba0b540005_Frame#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nra38rdbei",
+      "Integrity": "Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\upload\\5c23318d-e20d-494a-955a-b4ba0b540005_Frame.png"
     },
     {
-      "Identity": "C:\\hasan\\DashboardBackend\\wwwroot\\upload\\6abf7013-b829-4f45-85cf-1061f9999337_Frame.png",
+      "Identity": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\68a91bca-ee33-4162-afe8-9bf2776d05b1_بحث التخرج .pdf",
       "SourceId": "Ticket",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\hasan\\DashboardBackend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\",
       "BasePath": "_content/Ticket",
-      "RelativePath": "upload/6abf7013-b829-4f45-85cf-1061f9999337_Frame.png",
+      "RelativePath": "upload/68a91bca-ee33-4162-afe8-9bf2776d05b1_بحث التخرج #[.{fingerprint}]?.pdf",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "vhzah80cul",
+      "Integrity": "M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\upload\\68a91bca-ee33-4162-afe8-9bf2776d05b1_بحث التخرج .pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\6abf7013-b829-4f45-85cf-1061f9999337_Frame.png",
+      "SourceId": "Ticket",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\",
+      "BasePath": "_content/Ticket",
+      "RelativePath": "upload/6abf7013-b829-4f45-85cf-1061f9999337_Frame#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nra38rdbei",
+      "Integrity": "Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\upload\\6abf7013-b829-4f45-85cf-1061f9999337_Frame.png"
     },
     {
-      "Identity": "C:\\hasan\\DashboardBackend\\wwwroot\\upload\\a9af188f-a1df-45fb-b4cd-7f0b1fe2d52f_Frame.png",
+      "Identity": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\7ebc6893-5697-4fa0-a7ab-035edba0d27c_بحث التخرج .pdf",
       "SourceId": "Ticket",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\hasan\\DashboardBackend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\",
       "BasePath": "_content/Ticket",
-      "RelativePath": "upload/a9af188f-a1df-45fb-b4cd-7f0b1fe2d52f_Frame.png",
+      "RelativePath": "upload/7ebc6893-5697-4fa0-a7ab-035edba0d27c_بحث التخرج #[.{fingerprint}]?.pdf",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "vhzah80cul",
+      "Integrity": "M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\upload\\7ebc6893-5697-4fa0-a7ab-035edba0d27c_بحث التخرج .pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\a9af188f-a1df-45fb-b4cd-7f0b1fe2d52f_Frame.png",
+      "SourceId": "Ticket",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\",
+      "BasePath": "_content/Ticket",
+      "RelativePath": "upload/a9af188f-a1df-45fb-b4cd-7f0b1fe2d52f_Frame#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nra38rdbei",
+      "Integrity": "Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\upload\\a9af188f-a1df-45fb-b4cd-7f0b1fe2d52f_Frame.png"
     },
     {
-      "Identity": "C:\\hasan\\DashboardBackend\\wwwroot\\upload\\b957c70b-d7a8-4591-b609-7df509db32e1_462555171_4000430076943114_6716452946319358044_n.jpg",
+      "Identity": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\b160544a-877a-479f-aa8b-486475a3d1e3_بحث التخرج .pdf",
       "SourceId": "Ticket",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\hasan\\DashboardBackend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\",
       "BasePath": "_content/Ticket",
-      "RelativePath": "upload/b957c70b-d7a8-4591-b609-7df509db32e1_462555171_4000430076943114_6716452946319358044_n.jpg",
+      "RelativePath": "upload/b160544a-877a-479f-aa8b-486475a3d1e3_بحث التخرج #[.{fingerprint}]?.pdf",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "vhzah80cul",
+      "Integrity": "M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\upload\\b160544a-877a-479f-aa8b-486475a3d1e3_بحث التخرج .pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\b957c70b-d7a8-4591-b609-7df509db32e1_462555171_4000430076943114_6716452946319358044_n.jpg",
+      "SourceId": "Ticket",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\",
+      "BasePath": "_content/Ticket",
+      "RelativePath": "upload/b957c70b-d7a8-4591-b609-7df509db32e1_462555171_4000430076943114_6716452946319358044_n#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ku47vaku9r",
+      "Integrity": "tETIZZjHUvDrCeKlzs/R5hzdj4kiOZ8+gtPfXxBicss=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\upload\\b957c70b-d7a8-4591-b609-7df509db32e1_462555171_4000430076943114_6716452946319358044_n.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\c4e6684f-894e-4a08-afa3-e2dd2b53130d_بحث التخرج .pdf",
+      "SourceId": "Ticket",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\",
+      "BasePath": "_content/Ticket",
+      "RelativePath": "upload/c4e6684f-894e-4a08-afa3-e2dd2b53130d_بحث التخرج #[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vhzah80cul",
+      "Integrity": "M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\upload\\c4e6684f-894e-4a08-afa3-e2dd2b53130d_بحث التخرج .pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\cf281ba9-293a-4103-aa33-20aa39f52b47_بحث التخرج .pdf",
+      "SourceId": "Ticket",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\",
+      "BasePath": "_content/Ticket",
+      "RelativePath": "upload/cf281ba9-293a-4103-aa33-20aa39f52b47_بحث التخرج #[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vhzah80cul",
+      "Integrity": "M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\upload\\cf281ba9-293a-4103-aa33-20aa39f52b47_بحث التخرج .pdf"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "upload/0cec412a-4c3b-45e0-9c52-37d47a80ad02_a99f8270-03d6-4684-ac1b-37cdd9ba9cdb.cdc20pk0vy.webp",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\0cec412a-4c3b-45e0-9c52-37d47a80ad02_a99f8270-03d6-4684-ac1b-37cdd9ba9cdb.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "250344"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IO//IDH4/Cch1dqoGatvJfWQeOHuQHkadYI7kJqR6kE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 17:52:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cdc20pk0vy"
+        },
+        {
+          "Name": "label",
+          "Value": "upload/0cec412a-4c3b-45e0-9c52-37d47a80ad02_a99f8270-03d6-4684-ac1b-37cdd9ba9cdb.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IO//IDH4/Cch1dqoGatvJfWQeOHuQHkadYI7kJqR6kE="
+        }
+      ]
+    },
+    {
+      "Route": "upload/0cec412a-4c3b-45e0-9c52-37d47a80ad02_a99f8270-03d6-4684-ac1b-37cdd9ba9cdb.webp",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\0cec412a-4c3b-45e0-9c52-37d47a80ad02_a99f8270-03d6-4684-ac1b-37cdd9ba9cdb.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "250344"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IO//IDH4/Cch1dqoGatvJfWQeOHuQHkadYI7kJqR6kE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 17:52:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IO//IDH4/Cch1dqoGatvJfWQeOHuQHkadYI7kJqR6kE="
+        }
+      ]
+    },
+    {
+      "Route": "upload/16767ecd-3623-4e12-a2d7-b5833d5dd068_Frame.nra38rdbei.png",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\16767ecd-3623-4e12-a2d7-b5833d5dd068_Frame.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1286"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 17:52:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nra38rdbei"
+        },
+        {
+          "Name": "label",
+          "Value": "upload/16767ecd-3623-4e12-a2d7-b5833d5dd068_Frame.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g="
+        }
+      ]
+    },
+    {
+      "Route": "upload/16767ecd-3623-4e12-a2d7-b5833d5dd068_Frame.png",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\16767ecd-3623-4e12-a2d7-b5833d5dd068_Frame.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1286"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 17:52:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g="
+        }
+      ]
+    },
+    {
+      "Route": "upload/2ff3263c-7bef-4723-b94e-652beee38180_8188499d3fff7dcec871ed73775cd9d1.mlks3ra1k6.png",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\2ff3263c-7bef-4723-b94e-652beee38180_8188499d3fff7dcec871ed73775cd9d1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5051901"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tpk+ng02yq2/q1w5yvBV7251LwpUfjBbF8mK6i/RMTg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 17:52:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mlks3ra1k6"
+        },
+        {
+          "Name": "label",
+          "Value": "upload/2ff3263c-7bef-4723-b94e-652beee38180_8188499d3fff7dcec871ed73775cd9d1.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tpk+ng02yq2/q1w5yvBV7251LwpUfjBbF8mK6i/RMTg="
+        }
+      ]
+    },
+    {
+      "Route": "upload/2ff3263c-7bef-4723-b94e-652beee38180_8188499d3fff7dcec871ed73775cd9d1.png",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\2ff3263c-7bef-4723-b94e-652beee38180_8188499d3fff7dcec871ed73775cd9d1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5051901"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tpk+ng02yq2/q1w5yvBV7251LwpUfjBbF8mK6i/RMTg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 17:52:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tpk+ng02yq2/q1w5yvBV7251LwpUfjBbF8mK6i/RMTg="
+        }
+      ]
+    },
+    {
+      "Route": "upload/34db3578-8b52-4bf7-84b3-92d65fc94999_بحث التخرج .pdf",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\34db3578-8b52-4bf7-84b3-92d65fc94999_بحث التخرج .pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1569128"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 18:09:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA="
+        }
+      ]
+    },
+    {
+      "Route": "upload/34db3578-8b52-4bf7-84b3-92d65fc94999_بحث التخرج .vhzah80cul.pdf",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\34db3578-8b52-4bf7-84b3-92d65fc94999_بحث التخرج .pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1569128"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 18:09:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vhzah80cul"
+        },
+        {
+          "Name": "label",
+          "Value": "upload/34db3578-8b52-4bf7-84b3-92d65fc94999_بحث التخرج .pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA="
+        }
+      ]
+    },
+    {
+      "Route": "upload/3692d99c-4dae-4770-ba3a-a6b7f3ecf0f3_Frame.nra38rdbei.png",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\3692d99c-4dae-4770-ba3a-a6b7f3ecf0f3_Frame.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1286"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 17:52:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nra38rdbei"
+        },
+        {
+          "Name": "label",
+          "Value": "upload/3692d99c-4dae-4770-ba3a-a6b7f3ecf0f3_Frame.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g="
+        }
+      ]
+    },
+    {
+      "Route": "upload/3692d99c-4dae-4770-ba3a-a6b7f3ecf0f3_Frame.png",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\3692d99c-4dae-4770-ba3a-a6b7f3ecf0f3_Frame.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1286"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 17:52:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g="
+        }
+      ]
+    },
+    {
+      "Route": "upload/397caa83-fab1-4d08-8947-b76dec949184_بحث التخرج .pdf",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\397caa83-fab1-4d08-8947-b76dec949184_بحث التخرج .pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1569128"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 18:15:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA="
+        }
+      ]
+    },
+    {
+      "Route": "upload/397caa83-fab1-4d08-8947-b76dec949184_بحث التخرج .vhzah80cul.pdf",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\397caa83-fab1-4d08-8947-b76dec949184_بحث التخرج .pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1569128"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 18:15:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vhzah80cul"
+        },
+        {
+          "Name": "label",
+          "Value": "upload/397caa83-fab1-4d08-8947-b76dec949184_بحث التخرج .pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA="
+        }
+      ]
+    },
+    {
+      "Route": "upload/5c23318d-e20d-494a-955a-b4ba0b540005_Frame.nra38rdbei.png",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\5c23318d-e20d-494a-955a-b4ba0b540005_Frame.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1286"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 17:52:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nra38rdbei"
+        },
+        {
+          "Name": "label",
+          "Value": "upload/5c23318d-e20d-494a-955a-b4ba0b540005_Frame.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g="
+        }
+      ]
+    },
+    {
+      "Route": "upload/5c23318d-e20d-494a-955a-b4ba0b540005_Frame.png",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\5c23318d-e20d-494a-955a-b4ba0b540005_Frame.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1286"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 17:52:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g="
+        }
+      ]
+    },
+    {
+      "Route": "upload/68a91bca-ee33-4162-afe8-9bf2776d05b1_بحث التخرج .pdf",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\68a91bca-ee33-4162-afe8-9bf2776d05b1_بحث التخرج .pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1569128"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 18:13:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA="
+        }
+      ]
+    },
+    {
+      "Route": "upload/68a91bca-ee33-4162-afe8-9bf2776d05b1_بحث التخرج .vhzah80cul.pdf",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\68a91bca-ee33-4162-afe8-9bf2776d05b1_بحث التخرج .pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1569128"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 18:13:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vhzah80cul"
+        },
+        {
+          "Name": "label",
+          "Value": "upload/68a91bca-ee33-4162-afe8-9bf2776d05b1_بحث التخرج .pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA="
+        }
+      ]
+    },
+    {
+      "Route": "upload/6abf7013-b829-4f45-85cf-1061f9999337_Frame.nra38rdbei.png",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\6abf7013-b829-4f45-85cf-1061f9999337_Frame.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1286"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 17:52:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nra38rdbei"
+        },
+        {
+          "Name": "label",
+          "Value": "upload/6abf7013-b829-4f45-85cf-1061f9999337_Frame.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g="
+        }
+      ]
+    },
+    {
+      "Route": "upload/6abf7013-b829-4f45-85cf-1061f9999337_Frame.png",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\6abf7013-b829-4f45-85cf-1061f9999337_Frame.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1286"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 17:52:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g="
+        }
+      ]
+    },
+    {
+      "Route": "upload/7ebc6893-5697-4fa0-a7ab-035edba0d27c_بحث التخرج .pdf",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\7ebc6893-5697-4fa0-a7ab-035edba0d27c_بحث التخرج .pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1569128"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 18:04:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA="
+        }
+      ]
+    },
+    {
+      "Route": "upload/7ebc6893-5697-4fa0-a7ab-035edba0d27c_بحث التخرج .vhzah80cul.pdf",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\7ebc6893-5697-4fa0-a7ab-035edba0d27c_بحث التخرج .pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1569128"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 18:04:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vhzah80cul"
+        },
+        {
+          "Name": "label",
+          "Value": "upload/7ebc6893-5697-4fa0-a7ab-035edba0d27c_بحث التخرج .pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA="
+        }
+      ]
+    },
+    {
+      "Route": "upload/a9af188f-a1df-45fb-b4cd-7f0b1fe2d52f_Frame.nra38rdbei.png",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\a9af188f-a1df-45fb-b4cd-7f0b1fe2d52f_Frame.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1286"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 17:52:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nra38rdbei"
+        },
+        {
+          "Name": "label",
+          "Value": "upload/a9af188f-a1df-45fb-b4cd-7f0b1fe2d52f_Frame.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g="
+        }
+      ]
+    },
+    {
+      "Route": "upload/a9af188f-a1df-45fb-b4cd-7f0b1fe2d52f_Frame.png",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\a9af188f-a1df-45fb-b4cd-7f0b1fe2d52f_Frame.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1286"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 17:52:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Qz3FWuDYzp1TJGKvTXT1zSpkQSB9BHjmJcRX0BMqR3g="
+        }
+      ]
+    },
+    {
+      "Route": "upload/b160544a-877a-479f-aa8b-486475a3d1e3_بحث التخرج .pdf",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\b160544a-877a-479f-aa8b-486475a3d1e3_بحث التخرج .pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1569128"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 18:13:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA="
+        }
+      ]
+    },
+    {
+      "Route": "upload/b160544a-877a-479f-aa8b-486475a3d1e3_بحث التخرج .vhzah80cul.pdf",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\b160544a-877a-479f-aa8b-486475a3d1e3_بحث التخرج .pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1569128"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 18:13:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vhzah80cul"
+        },
+        {
+          "Name": "label",
+          "Value": "upload/b160544a-877a-479f-aa8b-486475a3d1e3_بحث التخرج .pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA="
+        }
+      ]
+    },
+    {
+      "Route": "upload/b957c70b-d7a8-4591-b609-7df509db32e1_462555171_4000430076943114_6716452946319358044_n.jpg",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\b957c70b-d7a8-4591-b609-7df509db32e1_462555171_4000430076943114_6716452946319358044_n.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "48015"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tETIZZjHUvDrCeKlzs/R5hzdj4kiOZ8+gtPfXxBicss=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 17:52:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tETIZZjHUvDrCeKlzs/R5hzdj4kiOZ8+gtPfXxBicss="
+        }
+      ]
+    },
+    {
+      "Route": "upload/b957c70b-d7a8-4591-b609-7df509db32e1_462555171_4000430076943114_6716452946319358044_n.ku47vaku9r.jpg",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\b957c70b-d7a8-4591-b609-7df509db32e1_462555171_4000430076943114_6716452946319358044_n.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "48015"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tETIZZjHUvDrCeKlzs/R5hzdj4kiOZ8+gtPfXxBicss=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 17:52:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ku47vaku9r"
+        },
+        {
+          "Name": "label",
+          "Value": "upload/b957c70b-d7a8-4591-b609-7df509db32e1_462555171_4000430076943114_6716452946319358044_n.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tETIZZjHUvDrCeKlzs/R5hzdj4kiOZ8+gtPfXxBicss="
+        }
+      ]
+    },
+    {
+      "Route": "upload/c4e6684f-894e-4a08-afa3-e2dd2b53130d_بحث التخرج .pdf",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\c4e6684f-894e-4a08-afa3-e2dd2b53130d_بحث التخرج .pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1569128"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 18:11:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA="
+        }
+      ]
+    },
+    {
+      "Route": "upload/c4e6684f-894e-4a08-afa3-e2dd2b53130d_بحث التخرج .vhzah80cul.pdf",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\c4e6684f-894e-4a08-afa3-e2dd2b53130d_بحث التخرج .pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1569128"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 18:11:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vhzah80cul"
+        },
+        {
+          "Name": "label",
+          "Value": "upload/c4e6684f-894e-4a08-afa3-e2dd2b53130d_بحث التخرج .pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA="
+        }
+      ]
+    },
+    {
+      "Route": "upload/cf281ba9-293a-4103-aa33-20aa39f52b47_بحث التخرج .pdf",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\cf281ba9-293a-4103-aa33-20aa39f52b47_بحث التخرج .pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1569128"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 18:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA="
+        }
+      ]
+    },
+    {
+      "Route": "upload/cf281ba9-293a-4103-aa33-20aa39f52b47_بحث التخرج .vhzah80cul.pdf",
+      "AssetFile": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\cf281ba9-293a-4103-aa33-20aa39f52b47_بحث التخرج .pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1569128"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 18:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vhzah80cul"
+        },
+        {
+          "Name": "label",
+          "Value": "upload/cf281ba9-293a-4103-aa33-20aa39f52b47_بحث التخرج .pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-M6PtF28CBq1Rgl9Yd/lfLi+Y2K4g/A3aXJxVkEwYQIA="
+        }
+      ]
     }
   ]
 }

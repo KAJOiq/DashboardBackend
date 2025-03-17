@@ -13,6 +13,7 @@ using Microsoft.OpenApi.Models;
 using Ticket.Interfaces;
 using DashboardBackend.Interfaces;
 using DashboardBackend.Repository;
+using DashboardBackend.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

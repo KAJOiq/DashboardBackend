@@ -1,7 +1,7 @@
-using Ticket.Dtos.Account;
+using project.Dtos.Account;
 
 namespace DashboardBackend.Interfaces;
 public interface IUserInformationFromToken
 {
-    Task<UserInfoDto> GetUserIdFromDatabase();
+    Task<project.Dtos.Account.UserInfoDto> GetUserIdFromDatabase();
 }

@@ -65,7 +65,7 @@ public class AccountController(UserManager<User> userManager, ITokenService toke
             return StatusCode(500, e);
         }
     }
-    
+
     [HttpPost("login")]
     public async Task<IActionResult> Login(LoginDto loginDto)
     {
@@ -202,5 +202,11 @@ public class AccountController(UserManager<User> userManager, ITokenService toke
 
         return Ok(new { UserId = user.Id });
     }
-
+    [HttpGet]
+    [Route("get_all_roles")]
+    public async Task<IActionResult> GetAllRoles()
+    {
+        var roles = await _roleManager.Roles.ToListAsync();
+        return Ok(roles);
+    }
 }

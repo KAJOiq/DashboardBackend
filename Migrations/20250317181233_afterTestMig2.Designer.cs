@@ -12,8 +12,8 @@ using projects.Data;
 namespace Ticket.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20250126073022_InitialMigration4")]
-    partial class InitialMigration4
+    [Migration("20250317181233_afterTestMig2")]
+    partial class afterTestMig2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -53,13 +53,13 @@ namespace Ticket.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "a8c81416-14a3-424a-af29-ee9d795d63cb",
+                            Id = "2b7fb21a-b8ed-4d80-b9f1-261a196d1191",
                             Name = "Student",
                             NormalizedName = "STUDENT"
                         },
                         new
                         {
-                            Id = "acf35d6f-fcba-4474-85f0-9e2841496183",
+                            Id = "ea25fb43-d44f-4789-b99b-034f1beecac2",
                             Name = "Supervisor",
                             NormalizedName = "SUPERVISOR"
                         });
@@ -169,6 +169,67 @@ namespace Ticket.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("projects.Models.Project", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime?>("Deadline")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Pdf")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Supervisor_Id")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Project");
+                });
+
+            modelBuilder.Entity("projects.Models.Students", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("ApproveStatus")
+                        .HasColumnType("boolean");
+
+                    b.Property<int>("ProjectId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("StudentId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProjectId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("Students");
                 });
 
             modelBuilder.Entity("projects.Models.User", b =>
@@ -291,6 +352,30 @@ namespace Ticket.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("projects.Models.Students", b =>
+                {
+                    b.HasOne("projects.Models.Project", "Project")
+                        .WithMany("Students")
+                        .HasForeignKey("ProjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("projects.Models.User", "Student")
+                        .WithMany()
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Project");
+
+                    b.Navigation("Student");
+                });
+
+            modelBuilder.Entity("projects.Models.Project", b =>
+                {
+                    b.Navigation("Students");
                 });
 #pragma warning restore 612, 618
         }

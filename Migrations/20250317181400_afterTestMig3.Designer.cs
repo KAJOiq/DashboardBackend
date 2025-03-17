@@ -12,8 +12,8 @@ using projects.Data;
 namespace Ticket.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20250126201634_InitialMigration5")]
-    partial class InitialMigration5
+    [Migration("20250317181400_afterTestMig3")]
+    partial class afterTestMig3
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -53,13 +53,13 @@ namespace Ticket.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "619e67a2-dafe-4452-8333-208cdc19b083",
+                            Id = "c47f4642-2a4c-4d65-a2f2-a2a46a265bd5",
                             Name = "Student",
                             NormalizedName = "STUDENT"
                         },
                         new
                         {
-                            Id = "22c53b8f-4e38-4b6d-8b12-0c14af849b1e",
+                            Id = "2a6db132-d6ad-46d3-bf7e-d5324e7c4f0d",
                             Name = "Supervisor",
                             NormalizedName = "SUPERVISOR"
                         });
@@ -182,23 +182,19 @@ namespace Ticket.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime>("Deadline")
+                    b.Property<DateTime?>("Deadline")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Pdf")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Supervisor_Id")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Title")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -213,6 +209,9 @@ namespace Ticket.Migrations
                         .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("ApproveStatus")
+                        .HasColumnType("boolean");
 
                     b.Property<int>("ProjectId")
                         .HasColumnType("integer");

@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using projects.Data;
@@ -11,9 +12,11 @@ using projects.Data;
 namespace Ticket.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20250317181033_afterTestMig")]
+    partial class afterTestMig
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -50,13 +53,13 @@ namespace Ticket.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "c47f4642-2a4c-4d65-a2f2-a2a46a265bd5",
+                            Id = "3e93f01d-2df2-4867-84f5-3995241293e8",
                             Name = "Student",
                             NormalizedName = "STUDENT"
                         },
                         new
                         {
-                            Id = "2a6db132-d6ad-46d3-bf7e-d5324e7c4f0d",
+                            Id = "dbc4bbae-2645-47d5-9bd8-cabf0c7f7066",
                             Name = "Supervisor",
                             NormalizedName = "SUPERVISOR"
                         });
@@ -183,15 +186,19 @@ namespace Ticket.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Pdf")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Supervisor_Id")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");

@@ -1,36 +1,68 @@
 {
   "Files": [
     {
-      "Id": "C:\\hasan\\DashboardBackend\\wwwroot\\upload\\0cec412a-4c3b-45e0-9c52-37d47a80ad02_a99f8270-03d6-4684-ac1b-37cdd9ba9cdb.webp",
+      "Id": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\0cec412a-4c3b-45e0-9c52-37d47a80ad02_a99f8270-03d6-4684-ac1b-37cdd9ba9cdb.webp",
       "PackagePath": "staticwebassets\\upload\\0cec412a-4c3b-45e0-9c52-37d47a80ad02_a99f8270-03d6-4684-ac1b-37cdd9ba9cdb.webp"
     },
     {
-      "Id": "C:\\hasan\\DashboardBackend\\wwwroot\\upload\\16767ecd-3623-4e12-a2d7-b5833d5dd068_Frame.png",
+      "Id": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\16767ecd-3623-4e12-a2d7-b5833d5dd068_Frame.png",
       "PackagePath": "staticwebassets\\upload\\16767ecd-3623-4e12-a2d7-b5833d5dd068_Frame.png"
     },
     {
-      "Id": "C:\\hasan\\DashboardBackend\\wwwroot\\upload\\2ff3263c-7bef-4723-b94e-652beee38180_8188499d3fff7dcec871ed73775cd9d1.png",
+      "Id": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\2ff3263c-7bef-4723-b94e-652beee38180_8188499d3fff7dcec871ed73775cd9d1.png",
       "PackagePath": "staticwebassets\\upload\\2ff3263c-7bef-4723-b94e-652beee38180_8188499d3fff7dcec871ed73775cd9d1.png"
     },
     {
-      "Id": "C:\\hasan\\DashboardBackend\\wwwroot\\upload\\3692d99c-4dae-4770-ba3a-a6b7f3ecf0f3_Frame.png",
+      "Id": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\34db3578-8b52-4bf7-84b3-92d65fc94999_بحث التخرج .pdf",
+      "PackagePath": "staticwebassets\\upload\\34db3578-8b52-4bf7-84b3-92d65fc94999_بحث التخرج .pdf"
+    },
+    {
+      "Id": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\3692d99c-4dae-4770-ba3a-a6b7f3ecf0f3_Frame.png",
       "PackagePath": "staticwebassets\\upload\\3692d99c-4dae-4770-ba3a-a6b7f3ecf0f3_Frame.png"
     },
     {
-      "Id": "C:\\hasan\\DashboardBackend\\wwwroot\\upload\\5c23318d-e20d-494a-955a-b4ba0b540005_Frame.png",
+      "Id": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\397caa83-fab1-4d08-8947-b76dec949184_بحث التخرج .pdf",
+      "PackagePath": "staticwebassets\\upload\\397caa83-fab1-4d08-8947-b76dec949184_بحث التخرج .pdf"
+    },
+    {
+      "Id": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\5c23318d-e20d-494a-955a-b4ba0b540005_Frame.png",
       "PackagePath": "staticwebassets\\upload\\5c23318d-e20d-494a-955a-b4ba0b540005_Frame.png"
     },
     {
-      "Id": "C:\\hasan\\DashboardBackend\\wwwroot\\upload\\6abf7013-b829-4f45-85cf-1061f9999337_Frame.png",
+      "Id": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\68a91bca-ee33-4162-afe8-9bf2776d05b1_بحث التخرج .pdf",
+      "PackagePath": "staticwebassets\\upload\\68a91bca-ee33-4162-afe8-9bf2776d05b1_بحث التخرج .pdf"
+    },
+    {
+      "Id": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\6abf7013-b829-4f45-85cf-1061f9999337_Frame.png",
       "PackagePath": "staticwebassets\\upload\\6abf7013-b829-4f45-85cf-1061f9999337_Frame.png"
     },
     {
-      "Id": "C:\\hasan\\DashboardBackend\\wwwroot\\upload\\a9af188f-a1df-45fb-b4cd-7f0b1fe2d52f_Frame.png",
+      "Id": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\7ebc6893-5697-4fa0-a7ab-035edba0d27c_بحث التخرج .pdf",
+      "PackagePath": "staticwebassets\\upload\\7ebc6893-5697-4fa0-a7ab-035edba0d27c_بحث التخرج .pdf"
+    },
+    {
+      "Id": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\a9af188f-a1df-45fb-b4cd-7f0b1fe2d52f_Frame.png",
       "PackagePath": "staticwebassets\\upload\\a9af188f-a1df-45fb-b4cd-7f0b1fe2d52f_Frame.png"
     },
     {
-      "Id": "C:\\hasan\\DashboardBackend\\wwwroot\\upload\\b957c70b-d7a8-4591-b609-7df509db32e1_462555171_4000430076943114_6716452946319358044_n.jpg",
+      "Id": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\b160544a-877a-479f-aa8b-486475a3d1e3_بحث التخرج .pdf",
+      "PackagePath": "staticwebassets\\upload\\b160544a-877a-479f-aa8b-486475a3d1e3_بحث التخرج .pdf"
+    },
+    {
+      "Id": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\b957c70b-d7a8-4591-b609-7df509db32e1_462555171_4000430076943114_6716452946319358044_n.jpg",
       "PackagePath": "staticwebassets\\upload\\b957c70b-d7a8-4591-b609-7df509db32e1_462555171_4000430076943114_6716452946319358044_n.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\c4e6684f-894e-4a08-afa3-e2dd2b53130d_بحث التخرج .pdf",
+      "PackagePath": "staticwebassets\\upload\\c4e6684f-894e-4a08-afa3-e2dd2b53130d_بحث التخرج .pdf"
+    },
+    {
+      "Id": "C:\\Users\\Kajo\\OneDrive\\Desktop\\DashboardBackend\\DashboardBackend\\wwwroot\\upload\\cf281ba9-293a-4103-aa33-20aa39f52b47_بحث التخرج .pdf",
+      "PackagePath": "staticwebassets\\upload\\cf281ba9-293a-4103-aa33-20aa39f52b47_بحث التخرج .pdf"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Ticket.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Ticket.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -6,5 +6,5 @@ public record GetProjectDto(
     string Pdf,
     string Supervisor_Id,
     DateTime CreatedAt,
-    DateTime Deadline
+    DateTime? Deadline
 );

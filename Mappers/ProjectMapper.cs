@@ -14,7 +14,7 @@ public static class ProjectMapper
             projectModel.Pdf,
             projectModel.Supervisor_Id,
             projectModel.CreatedAt,
-            projectModel.Deadline 
+            projectModel.Deadline
         );
     }
 
